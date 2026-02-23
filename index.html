@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yogesh Mahindrakar | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #111827;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 100px 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #111827;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn {
+            margin-top: 25px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #38bdf8;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111827;
+            color: white;
+        }
+
+        @media(max-width:768px){
+            header {
+                flex-direction: column;
+            }
+            nav {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Yogesh Mahindrakar</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#Time">Time</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>Welcome To My Portfolio</h2>
+    <p>Manual Tester & Digital Marketing Specialist with 4 Years of Experience</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</section>
+<section id="Time"></section>
+<h3>Time</h3>
+<div id="current-time"></div> 
+<script>
+function updateTime() {
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    document.getElementById("current-time").innerHTML = dateTimeString;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a dedicated Manual Tester and Digital Marketing Professional.
+            I specialize in Functional Testing, Bug Reporting, API Testing, SEO,
+            and Social Media Campaign Management.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Manual Testing</li>
+            <li>Bug Reporting (Jira)</li>
+            <li>API Testing (Postman)</li>
+            <li>SEO & Digital Marketing</li>
+            <li>Social Media Marketing</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <strong>E-commerce Website Testing</strong>
+        <p>Performed functional testing and reported critical production bugs.</p>
+    </div>
+
+    <div class="card">
+        <strong>Digital Marketing Campaign</strong>
+        <p>Improved traffic and engagement using SEO and paid ads strategy.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: yogeshmahindrakar24@gmail.com</p>
+        <p>Mobile: 9702961792 </p>
+        <p>LinkedIn: 
+            <a href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173/" target="_blank">
+                View Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Yogesh Mahindrakar | Portfolio
+</footer>
+
+</body>
+</html>
