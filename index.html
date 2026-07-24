@@ -3,709 +3,889 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yogesh Mahindrakar | QA Tester</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- FAVICON -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%234f8ef7'/%3E%3Cstop offset='100%25' stop-color='%237c5cfc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='50,5 91,27.5 91,72.5 50,95 9,72.5 9,27.5' fill='url(%23g)' opacity='0.2' stroke='url(%23g)' stroke-width='3'/%3E%3Cpolygon points='50,15 83,33 83,67 50,85 17,67 17,33' fill='%230d0f14' stroke='url(%23g)' stroke-width='2'/%3E%3Crect x='28' y='28' width='9' height='30' rx='3' transform='rotate(-25 32 43)' fill='url(%23g)'/%3E%3Crect x='61' y='28' width='9' height='30' rx='3' transform='rotate(25 66 43)' fill='url(%23g)'/%3E%3Crect x='45' y='50' width='9' height='26' rx='3' fill='url(%23g)'/%3E%3C/svg%3E">
-
+<title>Yogesh Mahindrakar | Manual QA Tester</title>
+<meta name="description" content="Yogesh Mahindrakar is a Manual QA Tester with 6+ years at Cirtru Classifieds, working across Web, Android and iOS.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314191C'/%3E%3Cpath d='M25 52 L42 68 L76 30' stroke='%234FBF93' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --paper:#F7F6F2;
+    --paper-dim:#EFEDE8;
+    --card:#FFFFFF;
+    --ink:#1B1E21;
+    --ink-soft:#585F66;
+    --ink-faint:#8D9297;
+    --line:#DEDCD7;
+    --line-soft:#EAE8E3;
+    --accent:#2C4562;
+    --accent-dim:#E8ECF0;
+    --available:#2F9E6E;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --radius:10px;
+    --radius-sm:6px;
+    --shadow:0 1px 2px rgba(20,20,20,.04), 0 10px 24px rgba(20,20,20,.06);
+    --shadow-sm:0 1px 2px rgba(20,20,20,.05);
+    --header-bg:rgba(247,246,242,.85);
+    --maxw:1120px;
+  }
+  html[data-theme="dark"]{
+    --paper:#12151A;
+    --paper-dim:#181B21;
+    --card:#191D23;
+    --ink:#EDEEEF;
+    --ink-soft:#A3A9AE;
+    --ink-faint:#686E74;
+    --line:#292E35;
+    --line-soft:#1E222A;
+    --accent:#93ABC9;
+    --accent-dim:#1D2A38;
+    --available:#3FBF8C;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 14px 30px rgba(0,0,0,.4);
+    --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+    --header-bg:rgba(18,21,26,.85);
+  }
 
-:root{
-  --bg:#0d0f14;--bg2:#13161e;--bg3:#1a1e2a;
-  --accent:#4f8ef7;--accent2:#7c5cfc;--green:#34d399;
-  --text:#e8eaf0;--muted:#8890a4;--border:#23283a;--card:#161a24;
-}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:radial-gradient(var(--line-soft) 1px, transparent 1px);
+    background-size:26px 26px;
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    transition:background-color .3s ease, color .3s ease;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,h4,p{margin:0;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  section + section{border-top:1px solid var(--line);}
+  ::selection{background:var(--accent-dim);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
 
-html{scroll-behavior:smooth}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+  .section-title{
+    font-size:clamp(26px,3.4vw,38px);
+    font-weight:600;
+    letter-spacing:-.02em;
+    max-width:640px;
+  }
+  .section-head{margin-bottom:48px;}
+  .section-sub{color:var(--ink-soft);max-width:560px;margin-top:14px;font-size:16px;}
 
-body{
-  background:var(--bg);color:var(--text);
-  font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;
-  overflow-x:hidden;
-}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease, transform .55s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
-@keyframes countUp{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
-@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
-@keyframes borderPulse{0%,100%{border-color:var(--border)}50%{border-color:rgba(79,142,247,.5)}}
+  .btn{
+    font-family:var(--mono);
+    font-size:14px;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 20px;
+    border-radius:var(--radius-sm);
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn svg{width:15px;height:15px;flex:none;}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{box-shadow:var(--shadow);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--ink);}
 
-.anim-fade-up{opacity:0;animation:fadeUp .7s ease forwards}
-.anim-fade-up.d1{animation-delay:.1s}
-.anim-fade-up.d2{animation-delay:.2s}
-.anim-fade-up.d3{animation-delay:.3s}
-.anim-fade-up.d4{animation-delay:.4s}
-.anim-fade-up.d5{animation-delay:.5s}
+  .tag-neutral{
+    display:inline-flex;align-items:center;
+    font-family:var(--mono);font-size:11px;font-weight:600;
+    color:var(--ink-soft);border:1px solid var(--line);
+    padding:4px 10px;border-radius:5px;letter-spacing:.04em;text-transform:uppercase;
+  }
 
-/* Scroll-reveal — JS adds .visible */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal.from-left{transform:translateX(-32px)}
-.reveal.from-left.visible{transform:translateX(0)}
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:var(--header-bg);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease, background-color .3s ease;
+  }
+  .site-header.scrolled{border-color:var(--line);box-shadow:0 1px 0 rgba(20,20,20,.02);}
+  .header-inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--mono);font-weight:600;font-size:15px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  nav.main-nav ul{display:flex;gap:28px;}
+  nav.main-nav a{
+    font-family:var(--mono);font-size:13.5px;color:var(--ink-soft);
+    padding-bottom:3px;border-bottom:1px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  nav.main-nav a:hover, nav.main-nav a.active{color:var(--ink);border-color:var(--accent);}
+  .header-right{display:flex;align-items:center;gap:16px;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-sm);width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer;flex:none;}
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+    content:'';display:block;width:16px;height:2px;background:var(--ink);position:relative;transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle span::before{position:absolute;top:-5px;}
+  .nav-toggle span::after{position:absolute;top:5px;}
 
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(13,15,20,.92);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-  padding:0 40px;display:flex;align-items:center;justify-content:space-between;
-  height:60px;transition:box-shadow .3s;
-}
-nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.4)}
+  .theme-toggle{
+    width:38px;height:38px;border-radius:50%;flex:none;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+    transition:border-color .15s ease, transform .15s ease, background-color .3s ease;
+  }
+  .theme-toggle:hover{border-color:var(--ink);transform:scale(1.06);}
+  .theme-toggle svg{width:17px;height:17px;}
+  .theme-toggle .icon-moon{display:none;}
+  html[data-theme="dark"] .theme-toggle .icon-sun{display:none;}
+  html[data-theme="dark"] .theme-toggle .icon-moon{display:block;}
 
-.nav-logo{
-  display:flex;align-items:center;gap:10px;text-decoration:none;
-  animation:fadeIn .5s ease;
-}
-.nav-logo svg{display:block;flex-shrink:0;animation:float 4s ease-in-out infinite}
-.nav-logo-text{
-  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 88px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  }
+  .status-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--available);
+    border:1px solid var(--line);padding:6px 12px;border-radius:999px;margin-bottom:20px;
+  }
+  .status-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--available);animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+  .hero h1{font-size:clamp(34px,4.6vw,54px);font-weight:600;letter-spacing:-.03em;line-height:1.05;}
+  .hero .role{
+    font-family:var(--mono);font-size:15.5px;color:var(--accent);font-weight:600;margin-top:14px;
+  }
+  .hero p.lede{color:var(--ink-soft);font-size:17px;margin-top:16px;max-width:480px;}
+  .contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .contact-chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);
+    border:1px solid var(--line);padding:7px 12px;border-radius:999px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .contact-chip:hover{border-color:var(--ink);color:var(--ink);}
+  .contact-chip svg{width:13px;height:13px;flex:none;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
 
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{
-  color:var(--muted);text-decoration:none;font-size:13px;
-  font-weight:500;letter-spacing:.04em;text-transform:uppercase;
-  transition:color .2s;position:relative;padding-bottom:4px;
-}
-.nav-links a::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;
-  height:2px;background:linear-gradient(135deg,var(--accent),var(--accent2));
-  transform:scaleX(0);transition:transform .25s ease;border-radius:2px;
-}
-.nav-links a:hover{color:var(--text)}
-.nav-links a:hover::after{transform:scaleX(1)}
+  .terminal{
+    background:#14191C;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    border:1px solid var(--line);
+  }
+  .terminal-bar{
+    display:flex;align-items:center;gap:14px;padding:12px 16px;background:#1B2226;border-bottom:1px solid #232C31;
+  }
+  .terminal-dots{display:flex;gap:7px;}
+  .terminal-dots span{width:10px;height:10px;border-radius:50%;display:block;}
+  .terminal-dots span:nth-child(1){background:#E5564C;}
+  .terminal-dots span:nth-child(2){background:#E8B03E;}
+  .terminal-dots span:nth-child(3){background:#39C57C;}
+  .terminal-title{font-family:var(--mono);font-size:12px;color:#8A939C;}
+  .terminal-body{
+    padding:20px 18px;font-family:var(--mono);font-size:13px;line-height:1.85;
+    min-height:290px;color:#D7DBDD;
+  }
+  .term-line{opacity:0;white-space:pre-wrap;word-break:break-word;}
+  .term-line.shown{opacity:1;}
+  .term-prompt{color:#93ABC9;}
+  .term-pass{color:#4FBF93;}
+  .term-final{color:#4FBF93;font-weight:600;margin-top:6px;}
+  .term-cursor{display:inline-block;width:7px;height:14px;background:#4FBF93;vertical-align:middle;margin-left:2px;animation:blink 1s step-end infinite;}
+  @keyframes blink{50%{opacity:0;}}
 
-/* Hamburger */
-.hamburger{
-  display:none;flex-direction:column;gap:5px;cursor:pointer;
-  background:none;border:none;padding:6px;
-}
-.hamburger span{
-  display:block;width:24px;height:2px;
-  background:var(--text);border-radius:2px;
-  transition:transform .3s,opacity .3s;
-}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .stats-row{
+    display:flex;flex-wrap:wrap;margin-top:60px;border-top:1px solid var(--line);padding-top:28px;
+  }
+  .stat{flex:1;min-width:150px;padding:0 22px;border-left:1px solid var(--line);}
+  .stat:first-child{border-left:none;padding-left:0;}
+  .stat-number{font-family:var(--mono);font-size:25px;font-weight:600;color:var(--ink);}
+  .stat-label{font-size:12.5px;color:var(--ink-soft);margin-top:5px;}
 
-/* Mobile menu */
-.mobile-menu{
-  display:none;position:fixed;top:60px;left:0;right:0;z-index:99;
-  background:rgba(13,15,20,.97);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-  padding:20px 24px 28px;
-  transform:translateY(-10px);opacity:0;
-  transition:transform .3s ease,opacity .3s ease;pointer-events:none;
-}
-.mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:all}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
-.mobile-menu a{
-  display:block;color:var(--text);text-decoration:none;
-  font-size:16px;font-weight:500;padding:12px 0;
-  border-bottom:1px solid var(--border);transition:color .2s,padding-left .2s;
-}
-.mobile-menu a:hover{color:var(--accent);padding-left:6px}
+  /* ---------- about / test case card ---------- */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;}
+  .tc-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;
+  }
+  .tc-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .tc-id{font-family:var(--mono);font-weight:700;font-size:15px;}
+  .tc-meta{padding:16px 24px;display:flex;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);background:var(--paper-dim);}
+  .tc-meta .kv{font-family:var(--mono);font-size:12px;color:var(--ink-soft);}
+  .tc-meta .kv b{color:var(--ink);font-weight:600;}
+  .tc-body{padding:24px;display:flex;flex-direction:column;gap:22px;}
+  .tc-block h4{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;font-weight:600;
+  }
+  .tc-block p{color:var(--ink-soft);font-size:15px;}
+  .tc-steps{counter-reset:step;display:flex;flex-direction:column;gap:10px;}
+  .tc-steps li{
+    counter-increment:step;position:relative;padding-left:30px;color:var(--ink-soft);font-size:15px;
+  }
+  .tc-steps li::before{
+    content:counter(step);position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:5px;
+    background:var(--accent-dim);color:var(--accent);font-family:var(--mono);font-size:11px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .about-copy{color:var(--ink-soft);font-size:16px;}
+  .about-copy p + p{margin-top:14px;}
+  .about-copy strong{color:var(--ink);}
 
-/* ── HERO ── */
-#home{
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  padding:100px 24px 60px;position:relative;overflow:hidden;
-}
-.hero-grid{
-  position:absolute;inset:0;
-  background-image:linear-gradient(var(--border) 1px,transparent 1px),
-                   linear-gradient(90deg,var(--border) 1px,transparent 1px);
-  background-size:60px 60px;opacity:.3;
-  mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
-  animation:fadeIn 1s ease .2s both;
-}
-/* Floating orbs */
-.orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
-.orb1{width:300px;height:300px;background:rgba(79,142,247,.12);top:15%;left:10%;animation:float 7s ease-in-out infinite}
-.orb2{width:200px;height:200px;background:rgba(124,92,252,.1);bottom:20%;right:8%;animation:float 9s ease-in-out infinite reverse}
+  /* ---------- skills ---------- */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .skill-group{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .skill-group:hover{border-color:var(--ink-faint);transform:translateY(-2px);}
+  .skill-group.learning{border-left:3px solid var(--accent);}
+  .skill-group h4{
+    font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;font-weight:600;
+  }
+  .skill-group.learning h4{color:var(--accent);}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-size:13.5px;font-family:var(--mono);padding:6px 10px;border-radius:6px;background:var(--paper-dim);color:var(--ink);border:1px solid var(--line);
+  }
+  .skill-group.learning .chip{color:var(--accent);border-color:var(--accent-dim);}
 
-.hero-content{position:relative;text-align:center;max-width:720px;width:100%}
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;padding-left:32px;}
+  .timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .timeline-item{position:relative;padding-bottom:56px;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-dot{
+    position:absolute;left:-32px;top:4px;width:12px;height:12px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--ink-faint);
+  }
+  .timeline-item.current .timeline-dot{border-color:var(--accent);background:var(--accent);}
+  .timeline-tag-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;}
+  .timeline-tag{font-family:var(--mono);font-size:12px;color:var(--ink-faint);}
+  .timeline-item.current .timeline-tag{color:var(--accent);}
+  .timeline-item h3{font-size:21px;font-weight:600;}
+  .timeline-item .company{color:var(--ink-soft);font-size:14.5px;margin-top:4px;font-family:var(--mono);}
+  .timeline-item ul{margin-top:16px;display:flex;flex-direction:column;gap:9px;}
+  .timeline-item li{color:var(--ink-soft);font-size:15px;padding-left:18px;position:relative;}
+  .timeline-item li::before{content:'-';position:absolute;left:0;color:var(--ink-faint);}
 
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(79,142,247,.12);border:1px solid rgba(79,142,247,.3);
-  border-radius:100px;padding:6px 16px;
-  font-size:12px;font-weight:500;color:var(--accent);
-  letter-spacing:.06em;text-transform:uppercase;margin-bottom:28px;
-}
-.hero-badge::before{
-  content:'';width:6px;height:6px;background:var(--green);
-  border-radius:50%;animation:pulse 2s infinite;
-}
+  /* ---------- projects ---------- */
+  .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .project-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .project-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+  .project-head{margin-bottom:8px;}
+  .ticket-id{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);font-weight:600;}
+  .project-card h3{font-size:19px;font-weight:600;margin-bottom:10px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+  .tag-row span{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);background:var(--paper-dim);padding:4px 8px;border-radius:5px;}
+  .project-card ul{display:flex;flex-direction:column;gap:8px;}
+  .project-card li{color:var(--ink-soft);font-size:14.5px;padding-left:16px;position:relative;}
+  .project-card li::before{content:'-';position:absolute;left:0;color:var(--ink-faint);}
 
-h1{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(38px,8vw,72px);font-weight:700;
-  line-height:1.05;letter-spacing:-.03em;margin-bottom:20px;
-}
-h1 span{
-  background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
+  /* ---------- pipeline ---------- */
+  .pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:0;}
+  .pipeline-step{position:relative;padding:0 14px;}
+  .pipeline-step:not(:last-child)::after{
+    content:'';position:absolute;top:19px;right:-14px;width:28px;height:1px;background:var(--line);
+  }
+  .pipeline-num{
+    width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:14px;margin-bottom:16px;
+  }
+  .pipeline-step h4{font-size:15.5px;font-weight:600;margin-bottom:8px;}
+  .pipeline-step p{font-size:13.5px;color:var(--ink-soft);}
 
-.hero-sub{font-size:clamp(14px,3vw,17px);color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.7}
+  /* ---------- checklists ---------- */
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .check-col h3{font-size:15px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:20px;font-weight:600;}
+  .check-item{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);}
+  .check-item:last-child{border-bottom:none;}
+  .check-item span{font-size:15px;color:var(--ink-soft);}
+  .checkbox{width:19px;height:19px;border-radius:5px;border:1.6px solid var(--ink-faint);flex:none;margin-top:1px;position:relative;}
+  .checkbox svg{position:absolute;inset:0;}
+  .checkbox path{
+    fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .5s ease .15s;
+  }
+  .check-item.is-visible .checkbox path{stroke-dashoffset:0;}
+  .check-item.is-visible .checkbox{border-color:var(--accent);}
 
-.hero-stats{display:flex;gap:clamp(20px,5vw,48px);justify-content:center;margin-bottom:40px;flex-wrap:wrap}
-.stat-item{text-align:center;animation:countUp .6s ease both}
-.stat-item:nth-child(1){animation-delay:.3s}
-.stat-item:nth-child(2){animation-delay:.45s}
-.stat-item:nth-child(3){animation-delay:.6s}
-.stat-item:nth-child(4){animation-delay:.75s}
-.stat-num{
-  font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:700;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;
-}
-.stat-label{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+  /* ---------- footer ---------- */
+  footer{padding:96px 0 40px;}
+  .footer-head{max-width:560px;}
+  .footer-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-.02em;}
+  .footer-head p{color:var(--ink-soft);font-size:16.5px;margin-top:14px;}
+  .footer-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .footer-bottom{
+    margin-top:80px;padding-top:24px;border-top:1px solid var(--line);
+  }
+  .footer-bottom p{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);}
 
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-primary{
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;text-decoration:none;padding:13px 28px;
-  border-radius:10px;font-weight:600;font-size:14px;
-  transition:opacity .2s,transform .2s,box-shadow .2s;display:inline-block;
-}
-.btn-primary:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,142,247,.35)}
-.btn-outline{
-  border:1px solid var(--border);color:var(--text);text-decoration:none;
-  padding:13px 28px;border-radius:10px;font-weight:500;font-size:14px;
-  transition:border-color .2s,transform .2s,background .2s;display:inline-block;
-}
-.btn-outline:hover{border-color:var(--accent);background:rgba(79,142,247,.07);transform:translateY(-2px)}
-
-/* ── SECTIONS ── */
-section{padding:90px 40px;max-width:1100px;margin:0 auto}
-.section-label{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
-h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
-.section-intro{color:var(--muted);max-width:520px;margin-bottom:56px;line-height:1.7}
-
-/* ── ABOUT ── */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.about-text p{color:var(--muted);line-height:1.8;margin-bottom:16px}
-.about-info{display:grid;gap:12px}
-.info-row{
-  display:flex;align-items:center;gap:14px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:10px;padding:14px 18px;
-  transition:border-color .2s,transform .2s;
-}
-.info-row:hover{border-color:rgba(79,142,247,.4);transform:translateX(4px)}
-.info-icon{font-size:18px;flex-shrink:0}
-.info-key{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.info-val{font-weight:500;font-size:14px}
-.info-val a{color:var(--accent);text-decoration:none}
-.info-val a:hover{text-decoration:underline}
-
-/* ── SKILLS ── */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.skill-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:12px;padding:22px;
-  transition:border-color .25s,transform .25s,box-shadow .25s;
-}
-.skill-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 28px rgba(79,142,247,.12)}
-.skill-card-icon{font-size:24px;margin-bottom:12px}
-.skill-card-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;margin-bottom:8px}
-.skill-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.tag{font-size:11px;padding:3px 9px;border-radius:100px;background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.2);color:var(--accent)}
-.tag.green{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.2);color:var(--green)}
-.tag.purple{background:rgba(124,92,252,.1);border-color:rgba(124,92,252,.2);color:var(--accent2)}
-
-/* ── EXPERIENCE TIMELINE ── */
-.timeline{display:grid;gap:0;position:relative}
-.timeline::before{
-  content:'';position:absolute;left:19px;top:8px;bottom:8px;
-  width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),transparent);
-  border-radius:2px;
-}
-.tl-item{display:grid;grid-template-columns:40px 1fr;gap:24px;margin-bottom:40px}
-.tl-dot{
-  width:40px;height:40px;border-radius:50%;
-  background:var(--bg2);border:2px solid var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;flex-shrink:0;position:relative;z-index:1;
-  transition:transform .2s,box-shadow .2s;
-}
-.tl-item:hover .tl-dot{transform:scale(1.12);box-shadow:0 0 16px rgba(79,142,247,.4)}
-.tl-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:26px 28px;
-  transition:border-color .2s,transform .2s;
-}
-.tl-card:hover{border-color:rgba(79,142,247,.4);transform:translateX(4px)}
-.tl-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
-.tl-role{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px}
-.tl-date{font-size:12px;padding:3px 10px;border-radius:100px;background:rgba(79,142,247,.1);color:var(--accent);border:1px solid rgba(79,142,247,.25)}
-.tl-promoted{font-size:11px;padding:3px 10px;border-radius:100px;background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.25);font-weight:600}
-.tl-company{color:var(--muted);font-size:14px;margin-bottom:16px}
-.tl-bullets{list-style:none;display:grid;gap:8px}
-.tl-bullets li{display:flex;gap:10px;color:var(--muted);font-size:14px;line-height:1.6}
-.tl-bullets li::before{content:'→';color:var(--accent);flex-shrink:0;font-weight:700}
-
-/* ── PROJECTS ── */
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.proj-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:28px;display:flex;flex-direction:column;
-  transition:border-color .25s,transform .25s,box-shadow .25s;
-}
-.proj-card:hover{border-color:rgba(79,142,247,.45);transform:translateY(-5px);box-shadow:0 12px 36px rgba(0,0,0,.3)}
-.proj-icon{font-size:28px;margin-bottom:16px}
-.proj-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;margin-bottom:10px}
-.proj-desc{color:var(--muted);font-size:14px;line-height:1.7;flex:1}
-.proj-metrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--border)}
-.metric-num{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.metric-label{font-size:11px;color:var(--muted)}
-
-/* ── JIRA LIFECYCLE ── */
-.jira-flow{
-  display:flex;align-items:stretch;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:32px 24px;overflow-x:auto;gap:0;
-  animation:borderPulse 4s ease infinite;
-}
-.jira-step{
-  display:flex;flex-direction:column;align-items:center;
-  gap:8px;flex:1;min-width:90px;padding:10px 6px;text-align:center;
-}
-.jira-num{
-  width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;flex-shrink:0;
-  transition:transform .2s;
-}
-.jira-step:hover .jira-num{transform:scale(1.2)}
-.jira-name{font-weight:600;font-size:13px}
-.jira-desc{font-size:11px;color:var(--muted);line-height:1.4;max-width:88px}
-.jira-arrow{color:var(--accent);font-size:18px;flex-shrink:0;align-self:center;padding:0 2px;opacity:.6}
-
-/* Mobile jira — vertical */
-.jira-flow-mobile{display:none;flex-direction:column;gap:0;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.jira-step-m{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-bottom:1px solid var(--border)}
-.jira-step-m:last-child{border-bottom:none}
-.jira-num-m{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;flex-shrink:0;margin-top:1px}
-.jira-step-m-title{font-weight:600;font-size:14px;margin-bottom:3px}
-.jira-step-m-desc{font-size:12px;color:var(--muted);line-height:1.5}
-
-/* ── LEARNING CARD ── */
-.learning-card{
-  background:linear-gradient(135deg,rgba(79,142,247,.08),rgba(124,92,252,.08));
-  border:1px solid rgba(124,92,252,.3);border-radius:16px;padding:32px;
-  display:flex;gap:24px;align-items:flex-start;margin-top:40px;
-  transition:border-color .2s,transform .2s;
-}
-.learning-card:hover{border-color:rgba(124,92,252,.6);transform:translateY(-2px)}
-.learning-icon{font-size:40px;flex-shrink:0;animation:float 4s ease-in-out infinite}
-.learning-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px}
-.learning-desc{color:var(--muted);font-size:14px;line-height:1.7}
-
-/* ── CONTACT ── */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.contact-card{
-  background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;
-  display:flex;flex-direction:column;align-items:flex-start;gap:10px;
-  text-decoration:none;color:inherit;
-  transition:border-color .2s,transform .2s,box-shadow .2s;
-}
-.contact-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(79,142,247,.15)}
-.contact-icon{font-size:26px}
-.contact-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.contact-val{font-weight:600;font-size:13px;color:var(--accent);word-break:break-all}
-
-/* ── DIVIDER / FOOTER ── */
-.full-divider{border:none;border-top:1px solid var(--border);max-width:1100px;margin:0 auto}
-footer{border-top:1px solid var(--border);padding:30px 40px;text-align:center;color:var(--muted);font-size:13px}
-
-/* ── SCROLL TO TOP ── */
-.scroll-top{
-  position:fixed;bottom:28px;right:28px;z-index:99;
-  width:44px;height:44px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  font-size:18px;color:#fff;
-  opacity:0;transform:translateY(16px);
-  transition:opacity .3s,transform .3s,box-shadow .2s;pointer-events:none;
-}
-.scroll-top.visible{opacity:1;transform:translateY(0);pointer-events:all}
-.scroll-top:hover{box-shadow:0 6px 20px rgba(79,142,247,.5)}
-
-/* ══════════════════════════════
-   RESPONSIVE — MOBILE
-══════════════════════════════ */
-@media(max-width:768px){
-  nav{padding:0 16px}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .mobile-menu{display:block}
-
-  section{padding:60px 16px}
-  #home{padding:80px 16px 50px}
-
-  h1{font-size:clamp(34px,10vw,52px)}
-  .hero-sub{font-size:14px}
-  .hero-stats{gap:18px}
-  .stat-num{font-size:26px}
-  .stat-label{font-size:10px}
-  .hero-btns{gap:10px}
-  .btn-primary,.btn-outline{padding:12px 22px;font-size:13px;width:100%;text-align:center}
-
-  .about-grid{grid-template-columns:1fr;gap:28px}
-
-  .skills-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .skill-card{padding:16px}
-  .skill-card-icon{font-size:20px;margin-bottom:8px}
-
-  .timeline::before{left:15px}
-  .tl-item{grid-template-columns:32px 1fr;gap:16px}
-  .tl-dot{width:32px;height:32px;font-size:14px}
-  .tl-card{padding:18px 16px}
-  .tl-role{font-size:15px}
-  .tl-meta{gap:6px}
-  .tl-bullets li{font-size:13px}
-
-  .projects-grid{grid-template-columns:1fr;gap:16px}
-  .proj-card{padding:20px}
-
-  /* Hide horizontal jira on mobile, show vertical */
-  .jira-flow{display:none}
-  .jira-flow-mobile{display:flex}
-
-  .learning-card{flex-direction:column;gap:16px;padding:22px}
-  .learning-icon{font-size:32px}
-
-  .contact-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .contact-card{padding:18px 14px}
-  .contact-val{font-size:12px}
-
-  footer{padding:24px 16px;font-size:12px}
-  .scroll-top{bottom:20px;right:16px;width:40px;height:40px;font-size:16px}
-}
-
-@media(max-width:400px){
-  .skills-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .hero-stats{gap:14px}
-}
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr 1fr;}
+    .projects-grid{grid-template-columns:1fr;}
+    .stats-row{flex-direction:column;gap:16px;}
+    .stat{border-left:none;padding-left:0;}
+    .check-grid{grid-template-columns:1fr;gap:8px;}
+    .pipeline{grid-template-columns:1fr;gap:28px;}
+    .pipeline-step::after{display:none;}
+    nav.main-nav{
+      position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .25s ease;
+    }
+    nav.main-nav.open{max-height:320px;}
+    nav.main-nav ul{flex-direction:column;padding:8px 24px 20px;gap:4px;}
+    nav.main-nav a{display:block;padding:10px 0;border-bottom:1px solid var(--line-soft) !important;}
+    .nav-toggle{display:flex;}
+  }
+  @media (max-width:560px){
+    section{padding:64px 0;}
+    .skills-grid{grid-template-columns:1fr;}
+    .about-grid, .hero-grid{gap:36px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001s !important;transition-duration:.001s !important;}
+  }
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
-<nav id="mainNav">
-  <a href="#home" class="nav-logo">
-    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="navG" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#4f8ef7"/>
-          <stop offset="100%" stop-color="#7c5cfc"/>
-        </linearGradient>
-      </defs>
-      <polygon points="50,5 91,27.5 91,72.5 50,95 9,72.5 9,27.5" fill="url(#navG)" opacity="0.18" stroke="url(#navG)" stroke-width="3"/>
-      <polygon points="50,15 83,33 83,67 50,85 17,67 17,33" fill="#0d0f14" stroke="url(#navG)" stroke-width="2"/>
-      <rect x="28" y="28" width="9" height="30" rx="3" transform="rotate(-25 32 43)" fill="url(#navG)"/>
-      <rect x="61" y="28" width="9" height="30" rx="3" transform="rotate(25 66 43)" fill="url(#navG)"/>
-      <rect x="45" y="50" width="9" height="26" rx="3" fill="url(#navG)"/>
-    </svg>
-    <span class="nav-logo-text">Yogesh M.</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="#home" class="mob-link">Home</a></li>
-    <li><a href="#about" class="mob-link">About</a></li>
-    <li><a href="#skills" class="mob-link">Skills</a></li>
-    <li><a href="#experience" class="mob-link">Experience</a></li>
-    <li><a href="#projects" class="mob-link">Projects</a></li>
-    <li><a href="#contact" class="mob-link">Contact</a></li>
-  </ul>
-</div>
-
-<!-- ── HERO ── -->
-<section id="home" style="max-width:100%;padding-top:0;padding-bottom:0;">
-  <div class="hero-grid"></div>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="hero-content">
-    <div class="hero-badge anim-fade-up d1">Available for Opportunities</div>
-    <h1 class="anim-fade-up d2">Yogesh<br><span>Mahindrakar</span></h1>
-    <p class="hero-sub anim-fade-up d3">Manual QA Tester · Web &amp; Mobile App Testing · 5+ Years at Cirtru Classifieds · Internally Promoted 2024</p>
-    <div class="hero-stats anim-fade-up d4">
-      <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Years Experience</div></div>
-      <div class="stat-item"><div class="stat-num">1000+</div><div class="stat-label">Test Cases</div></div>
-      <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Jira Bugs Raised</div></div>
-      <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Platforms Tested</div></div>
-    </div>
-    <div class="hero-btns anim-fade-up d5">
-      <a href="#contact" class="btn-primary">Get in Touch</a>
-      <a href="#experience" class="btn-outline">View Experience</a>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="logo"><span class="logo-dot"></span>Yogesh Mahindrakar<span style="color:var(--ink-faint)">/</span>QA</div>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
     </div>
   </div>
-</section>
+</header>
 
-<hr class="full-divider">
-
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="section-label reveal">About Me</div>
-  <h2 class="reveal">QA Engineer with a Product Mindset</h2>
-  <p class="section-intro reveal">Bridging deep product knowledge with rigorous testing discipline — catching bugs before users ever see them.</p>
-  <div class="about-grid">
-    <div class="about-text reveal from-left">
-      <p>I am a Manual QA Tester with hands-on experience in Web and Mobile Application Testing since 2024. Internally promoted by management for outstanding performance and deep product knowledge built over 5+ years at Cirtru Classifieds.</p>
-      <p>I specialise in designing detailed test cases, identifying critical defects, and ensuring smooth application performance before release. My practical experience covers Functional, Regression, Smoke &amp; Sanity Testing, along with full defect lifecycle management in Jira.</p>
-      <p>Before transitioning into QA, I worked as a Digital Marketing Executive — giving me an analytical, user-focused approach that directly feeds into writing business-critical test cases. Currently learning Selenium and Automation Testing.</p>
-    </div>
-    <div class="about-info reveal">
-      <div class="info-row"><div class="info-icon">📍</div><div><div class="info-key">Location</div><div class="info-val">Mumbai, Maharashtra, India</div></div></div>
-      <div class="info-row"><div class="info-icon">📧</div><div><div class="info-key">Email</div><div class="info-val"><a href="mailto:yogeshmahindrakar24@gmail.com">yogeshmahindrakar24@gmail.com</a></div></div></div>
-      <div class="info-row"><div class="info-icon">📱</div><div><div class="info-key">Phone</div><div class="info-val"><a href="tel:+919702961792">+91 9702961792</a></div></div></div>
-      <div class="info-row"><div class="info-icon">🔗</div><div><div class="info-key">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173/" target="_blank">yogesh-mahindrakar-190a88173</a></div></div></div>
-      <div class="info-row"><div class="info-icon">🏢</div><div><div class="info-key">Current Company</div><div class="info-val">Cirtru Classifieds Pvt Ltd</div></div></div>
-    </div>
-  </div>
-</section>
-
-<hr class="full-divider">
-
-<!-- ── SKILLS ── -->
-<section id="skills">
-  <div class="section-label reveal">Core Skills</div>
-  <h2 class="reveal">Tools &amp; Expertise</h2>
-  <p class="section-intro reveal">A focused stack for manual QA — covering everything from test design to cross-platform execution and defect lifecycle management.</p>
-  <div class="skills-grid">
-    <div class="skill-card reveal"><div class="skill-card-icon">🧪</div><div class="skill-card-title">Testing Types</div><div class="skill-tags"><span class="tag">Functional</span><span class="tag">Regression</span><span class="tag">Smoke</span><span class="tag">Sanity</span><span class="tag">Exploratory</span><span class="tag">End-to-End</span><span class="tag">UI/UX</span></div></div>
-    <div class="skill-card reveal"><div class="skill-card-icon">📱</div><div class="skill-card-title">Platforms</div><div class="skill-tags"><span class="tag green">Web App</span><span class="tag green">Android</span><span class="tag green">iOS</span><span class="tag green">Chrome</span><span class="tag green">Firefox</span><span class="tag green">Safari</span></div></div>
-    <div class="skill-card reveal"><div class="skill-card-icon">🐛</div><div class="skill-card-title">Bug Management</div><div class="skill-tags"><span class="tag purple">Jira — Full Lifecycle</span><span class="tag purple">Bug Reports</span><span class="tag purple">Severity &amp; Priority</span><span class="tag purple">Screenshots</span></div></div>
-    <div class="skill-card reveal"><div class="skill-card-icon">📋</div><div class="skill-card-title">Documentation</div><div class="skill-tags"><span class="tag">Test Cases</span><span class="tag">Test Plans</span><span class="tag">Test Summary Reports</span></div></div>
-    <div class="skill-card reveal"><div class="skill-card-icon">⚡</div><div class="skill-card-title">Methodologies</div><div class="skill-tags"><span class="tag green">Agile / Scrum</span><span class="tag green">Waterfall</span><span class="tag green">Sprint Reviews</span></div></div>
-    <div class="skill-card reveal"><div class="skill-card-icon">🤝</div><div class="skill-card-title">Collaboration</div><div class="skill-tags"><span class="tag purple">Developers</span><span class="tag purple">Product Owner</span><span class="tag purple">BA</span><span class="tag purple">Project Manager</span></div></div>
-  </div>
-</section>
-
-<hr class="full-divider">
-
-<!-- ── EXPERIENCE ── -->
-<section id="experience">
-  <div class="section-label reveal">Work Experience</div>
-  <h2 class="reveal">Career Timeline</h2>
-  <p class="section-intro reveal">5+ years at a single company — growing from digital marketing to QA through consistent performance.</p>
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-dot">🔬</div>
-      <div class="tl-card">
-        <div class="tl-meta">
-          <div class="tl-role">Manual QA Tester</div>
-          <div class="tl-date">Jan 2024 – Present</div>
-          <div class="tl-promoted">⬆ Internal Promotion</div>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="status-badge"><span class="dot"></span>Actively looking for new roles</div>
+        <h1>Yogesh Mahindrakar</h1>
+        <div class="role">Manual QA Tester &middot; Web, Android &amp; iOS</div>
+        <p class="lede">I test software before it reaches real users. 6+ years at Cirtru Classifieds, the last 3+ of them in QA.</p>
+        <div class="contact-row">
+          <a class="contact-chip" href="mailto:yogeshmahindrakar24@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            yogeshmahindrakar24@gmail.com
+          </a>
+          <a class="contact-chip" href="tel:+919702961792">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
+            +91 97029 61792
+          </a>
+          <a class="contact-chip" href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+            LinkedIn
+          </a>
+          <a class="contact-chip" href="https://yogeshmahindrakar24-design.github.io" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Portfolio
+          </a>
+          <a class="contact-chip" href="https://www.instagram.com/yogesh_m26/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+            Instagram
+          </a>
+          <span class="contact-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Mumbai, Maharashtra
+          </span>
         </div>
-        <div class="tl-company">Cirtru Classifieds Pvt Ltd · Mumbai, Maharashtra</div>
-        <ul class="tl-bullets">
-          <li>Handpicked by management for deep product knowledge and outstanding performance</li>
-          <li>Review requirements and user stories before dev begins — identify gaps and prepare test strategy early</li>
-          <li>Design test cases and test plans covering positive, negative, boundary and edge scenarios</li>
-          <li>Execute functional testing to validate features against requirements and acceptance criteria</li>
-          <li>Perform regression testing after every code change — ensure no existing functionality breaks</li>
-          <li>Conduct smoke and sanity testing on every new build across Web, Android and iOS</li>
-          <li>Log detailed bug reports in Jira with steps, expected vs actual, severity, priority and screenshots</li>
-          <li>Prepare test summary reports with pass/fail metrics and defect stats for stakeholders</li>
-          <li>Coordinate with developers, PM, BA and product owners across the full SDLC</li>
-          <li>Participate in Agile sprints, stand-ups, reviews and retrospectives</li>
-        </ul>
-      </div>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot">📣</div>
-      <div class="tl-card">
-        <div class="tl-meta">
-          <div class="tl-role">Digital Marketing Executive</div>
-          <div class="tl-date">2019 – 2023</div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDYgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GMyAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0NvbnRlbnRzIDExIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0Y0IC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNyAwIG9iago8PAovQ29udGVudHMgMTIgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyAxMCAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDYxMDA0NTM0NiswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MDYxMDA0NTM0NiswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoXChhbm9ueW1vdXNcKSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iagoxMCAwIG9iago8PAovQ291bnQgMiAvS2lkcyBbIDUgMCBSIDcgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAzOTQxCj4+CnN0cmVhbQpHYiFsIj5CPzpUJnE4MDFrYS9XUENiM0cnXnRcQj9jNXBWaGoyQ1hsRyx0MGgmZ00rIkAnZyM8OyxyKUNsKC5wL0QnVz5CRz5JOzwnaGM9cl90PCdWWUloJUEyWj5dNHBFVGs5alV0bjZHLy8rVkVYSWhGcS9DVGRhLVktT0hLTl4lNGlfUmVhKztUXFhNRlFtXUZEJ3VxUG91SUNGNjpZIlJfaThuVUdAbVlvR2ldK3I7ZUNqRzNGNy8ydCMuR1hSYlYzJVBFUSliIWU4SFNHcyE1XU4xanI6Imp1SmZnQTYqJzExaT1bLEBZUVBpUVdLJ1VsIlN0OUVcVmshOWQlV0MkKmpHQD5JOUtlMFM6TjYrY2MySmM2RFFNY05BcV8wOyM7aVwhY3VlUyRacHFFKCswNzBlNFU0Ml1oZjIhOi8uQ0NAXU9FPiY1RDJbOVBbIjdRMiRbTDQjSl5SLkw3ZEQrKi9nJyFpRjhNJE0wdWMhZDJdY2FvIz9CMVQiNi5EclZWPCsib1FLMS5ZKmUnLFpMYG0zKGQ9TkxvSzwoIVVtMGEzJV48ckdbImBoLUxPIkJxY2hDcy5iJnAvI3JtLzpZPzhMWnFfNGhAKktAamVCV0RVO2MpLjkvIj49LC9oOEAoTGtCXkBBN2VLQC9bNFUsQ2Q4WTxzRktqMjpRYFxOWHAmQDF1UXE0PzliVm5iPksyTVFLcXRvIWpnWTcvJF8ySHJzMzQuTGRqRmplTUFOdGI/WG8kNGFoVHRWKiVaSihDJjVGcHVNS3UyUlE7KVlNNUpKWGtXc3ErYl4wUlFaXlooKmthbFpvZXIxdS1qQEUwalE6PkcyV0AnXzglNj50Jl1eWShNaGh0SEs4ZyNJQHFLR1MqYD47Sy4lWDBFdTMoMTtLQXMkJlpRPlc7OVcjOyIzazY1NyxwSGEvSnE1Nig7RCd1MUkwWDkzbihxTEM3T0tvOCNYbCs5dWwjRTdaYCRMTEMpUkA/YiQkbEgpTytKP15xckJsZVs3YVsjVSVJMlBxbDY0SGIocSlkckpmdTMlI2NBOFo0bjZmKC8wLWotVy5WbSo+cjhacFgmJEJiWSRxQ2Qja15bUUIlMSwiaGApLz5IKyxlYC1bK0BcRTwlKFgyMVUlJiFAcys9MzpJPSpoZzVGWShIQk5WUUNPZjkkNVE2R1pLKTxxKEMmNmM8LTBJZC03LzAtJGEqKiFFIidxYiU1MjlEVDVfSUE9QzVlL2A/bkZqNms2RSRIcjo8Lm8sYlwtVC4sZE5iNTs1bDEzbDxQPmQuSXRYIVkiMDRFI21eR1pVP05XTDM3dUM2SSQzNmotaTMrV0A/cCQlPFAjKE81WG03X0lZLHBxWkNIVnRmST0vbTRbQ2lzMGBJVHBfVyldViZnXkJWbk9BVm1cTTFlazU6VWJdPUojOzxab0djPHQxQkBNXmJLakgjYnE0KW1adGEzSGZsWCNzbG5EU3JNNVMoNkhcbS8uXFFJUUtQUV1nMWdlU3QyRVlJI1ZbbE5hMk0nWihgWVw/UzknMmlURmdocG5QJjZZVCVxLEsjcDBZTm9cZ2I+ZyNZKiJARzwoZEZFay1CUGlwVkQvZi5kNSZKKmNkMTFMRjslNEYzZnRtbDFLJD5rVTJwODtZJGYsN1k/WyxydWxxP0FIZy1KWjo9PUZ0K1tCXSdYOlBQXGNpV2Z0aHJUKikvSXIpUVgmLTpYS18yPm5ATkpVSyxGRFNcb29paC5EPjVXVjVgbVdMOUhldUpWZzBUaitONDpzb0Q0PlRwKWBeJkZPUTNxYCROYmR0MUBTW2FiQWNpPVlgKmNULmdcLm1hMFE1WWNTUG5fLjpyQShfV0RYRFJqT1gkLTd1IlozcE9QViNBTF5oZjw9PDRubmZ1NSYtbVFYaC1aQ08oNDoya3ImRDhOUlVfIXRtc1ppJlQ/Pkw2Y19qR0NwYyg2Mlo3KEg7byxNbF9baCJANmgwSGQtPy1WOypiISt0WFFqVkhIOC8mUj1lLUtiMlMrMkkjamtfQyhuTlBbJThIKTRWKllHRkxfYDRuKTMrPCU9LC1ERzE5JnQoWnAzIlhzO08tWEdNXmxvOz4uI05kXjpccjg0LEVYUGRHT004L3M/TkI2NFwzX2c2RChqayYpckNRWitaVjxWRVpAay5DNlFJQTVzcjEvNkhzbXJuLyRyMGpNcm80LkBNRz1tPkRRcUE9WTxvaTpyay1XRjxjXikrJT1WVyxOMlcpK0EtImhaIWQtb2MxU1VJNnBWanNhYTs3IV5mQCIscGpTZFkxL1V1a1orMUlgNmVWWmNSLktpIXRfcEUlKVMjMmtQaWJJLjoxVjdValpeXm8tIj9XLnV1Oz5PIy9gMD0oJiszci9dS0IjMlEqTThyRHM3YmFQVDtta0ZwcnMxYEI8dFItb21rakosR1ZITHI+VDUxL0xePVlcKF9oaGE5bSlwZnRaY29WUkg7VGplZ0UiT1wyU0AnSks9OW0tWFI3aClyJzxnUmldQFsiPEpPXHUnNCNdWGIvIjUuRk9gVUNnJTFqS1tOJCo0c2YyZzpGXi9GajBvV2ghbV9MYko8bmNEOUQwJUNxPEtBWEdtSEhfSWEnWClhS0dAOTgpQGA6SSshOyxbMWpAXUhQMGkvIyxIaVYqOGNXa0UqKj4kJ1o6PG5DXS4vUUFZZl9UI2VQVUJPYzpkPj08KEshXycoNkptX01xXjw1T21qaU5KIVwuV0xrJ2EmZ2ZMIjxXKihAQWZbZjJoVE8oaU9VYSNDWkY2PmdSMWlAQCpHYlZoWyU9RDI1LTxsWGpxaUFhJidJJzhCW3NwYT9Zb1RXJUhJTlc3QDtFP1kxb0ZWRHVOM0BeLipcOlEvQkFWSyNTJnNGMk0tJkglcEEtaUtbSmV1Y3JQY1NKPDE2WTFRX3RAUHRzJkJCJS9aNnJSMGhwPltqdD5nMiszUVlwVSM4JGBUWlN0bUFkVyZWPFdlSVtBQD4kU2ZpUi1JIm4uS0pnLFVgX0hvSWVnNTEycFpUPjQ/XVAsIkBQRV1ESDxVbUJDcjNzaUgsOiosXnEqOUhfa1pvQDVYIzxmcE9IIyNGTFA+bDZfM2E2QDZlMFRvVVFMTGxqYEciWyI+OmBnWkAtKWQqXyFPPFloYyMqbEcyTEJNIjVWdXVlJlxCRSN1UnJtUXQrNnFtKD1hNy5VYWRLMz5CJT8/ZSw+aj8iLFNQUDpJMkMmMnVbXypDXG1jMzVaVD42KFZrKVRmMVxqTUVnMmNYVF1aXFZlK19BYC9WNlNOZkZyNEwxMl8/RCllJC8+TmYzXkZdRTVYUVIsazBjcS4pJ1s5LHRXN1FBZV9kMisoZUFDNF1cZmNvS2BuRDc0aSs2cCgpcGNYYEdfU19vKjFKVXVQV1oyMmpwNkEyRGA9OjVoYTtGR1VOUlVVJUJTRmZpWW1EKGI0PmcxJyZxKWM4LU9gMFpuWF5TOjdLRy47KSFdaCY2LGUuVWE/T0EncF1rcFpzNVMvQ1ojVERaPHFKcW1sMCZbXjtibmJzRG9hKDlEbVMpb0E/W0dzOGdLS2goYCpOXiMlWDU7Lk1OLEwwVGlMRDQ3Y3ViL2FybEw4YiRUNFFUXktfTishTUptZmBhI1M4JlRgcWwyNWxXdU45MGoiXGZkSGQ6YjNOLGU9PmhoTzU8JkxzWFoiXGsrdTdfay8vUjBNQyNdWzxHNVRPRFYsciJqZTpLQXJuSl03SSRDQywmU1VrSl5cbFswZkpVTTNxJktpWTZGUl1OakZyPTsmW2QkL21uciVXVihUJ1JeajMrVmxrSGY9Vy04MUhqTWBjKCNXQDdRaUctOEZkRklEWjRwRDE9UVtdOGpkbTBZIm4hMDY0ZVM1bkl1QkM4QF0rO24jLTtGVEsqME5qPiEqdTk4KmAob0ZTNDBPSUBPVkBBczotbSlKJiQ8JStLJCwyOjhlVCtZUiMyLCVTPWo7WSomYDtsLF1WVFVCOk1RX3RGVlEwMmJVYnNmbk1VK0NGNWZCQ1k2L09eXWgsK0RoYUpeal5cay9vKTleUUxYJDdpMWEkXTU2RiJYU0JwTWkrVF9gbFVANUplIztFQnBCUF87SVZXQTZqbi1rQFpEQEFmXUE5Uic0ZWYiTDtaYnNRI0IkTC1jSDxkMWhTVlFLZjVnVUhdOFtEKU41SlQsSnQ0QTwqcU9EWSskN1Y4WD9OOi9zSjowKlxJMyErPFtfJUZoXTxDI2xoZkZbQCpfUVMnMXRfXkNeZkYlNz9ZJDQjKUZlLlk4NmxCS2VydWdSJE85Il9MI0BTaDpCMjY3KkorVThYTWkhLyRkXGxVTD9hYCwoSFsnPy0kTSgzU3VJVituMyo7XFdXTmZrTGVnV0FIMnJHM2NAXD0xcUo4MlltS2chR09xZzNnO0suMHRGJzFVSDQxYzxoJGI6UkgqTmFLQm1qbmFpcjxAOiluK2gyYE1zUV9bQUI7TSE9XiMhV1JwdV9eZEdULSlVOVApPHNVV21kWHBSV0NoMERSMjd1L2tDRlZzRjwrV0BoPkJKOl46LChZNywoRTpkaG9bMXFkNl9AXUFOMVRfVzNgIyE/RkBUKTVcK2pvUGw2MD47LmVUJUFNKTo9JVknKjwtNV1UKkMtJTYvPzxlRzBmTiRuTylTWFg9cFFcRXBJMFJyYUNzRmcwSTIzYXEsRVQpYnBJZmhqVj1aVjFRRWBULjREPTFqPlM/UVFPUzsyLkNoOjMtazw9TktNRVE+bUFHKCFAZyMlaFhqUFBAP2A0QXNbJXVhQXBybnNtZCNRTGUwbjJZXF9Ya043M0QzKDZYcUNXMDNdMG81J288ZCZDLj9gOm5xWypoRW8wXFNHc1tkWzk4MzB0VGdPZVdhO14hZFhpWCs2ZTZcNkBQIzdzNlJDU0w0XWlBcD9VYGRMSWJXTSNebC1zQkVXQjcjPlhVcEUxVStVREFyMlM0NChoZTUlK3BiI0w0aS5TUi0sNj9RMHQ6bTYqMltvJW9URDtXRVsrNUYmVWhtJWQ4Uytjb10+LSFKcXEnZ1dqPjhAbUNGMV9Bcy9FM3I2aDM3aU4scyhaVkNubEpKYmJcTDsqVj8hJlJIQURqJEwtM1llSEpETkMkKTZeXFlbcm00PV9iZSMpOiZwKzFzSnByO1shbjI5QSUzVz9LJFtPaEFVOyk3blhXPT00XEY/dElvRD5Kc21vdUsmTFUjZkpuRWJZZjlKW21+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggNDU4NQo+PgpzdHJlYW0KR2IhbCM+QkFPVyg0T1Q1XnNlPVFDTVVuSTcmaiZLXGs7OzxEQikvLmchOTNuK3NAN004WjNiRzc2Qz44cV01L1VTImY7Z1JxXnFvQ21jSVE1VF5LXXE5Qi9MZkZcJzdvL2hhR3FkSU1EcTpdO0RjIjc+cVxIQTJDMCViOj5sSGBPNGchVWBLcjZgbFowW0kzNCxNLXIpKixaOmdpUTFiMTJSKDMoMl1UL1Q0Vy5GZTEiNDxJJChlS0RDaDA8U2tQRk5KKEwiJl5HSFphdTpHZiYqKkxeRihIXDo9ND0sXlk6PFZfR046XTpLWGA5PihYUz07LWtJVCZuJVkxUCUtYVgjQzZMP2xVXGZjUCYoKlZLQ0FzJyRgQ19ual5rXWtYKC5tVG8ra2tgX24uZGglLWRJOXI2TDRQdDk4bDxyVVRROkUkYSpGODRdazdOJmJiJTtqQktQJkdlSGg9Ol5ASSxiMWs/UWtqSFlfYV8ycSwxaklrPi5fVUh0UjRIYGQ8JlouUXU2ZzY4Zic6JGQ1IW0rbjQua2g9UyhIMmJTdXFXPEY9KWlWZGhuXGRucGhJb2VHcSIrJDZLTjNJdCgzWCkubDohNTdGTmdJYj8sKGVENGUmX0BKJCxbI2tMM2VhVkIoVGcjIVtURitFb1o0cGhca3IzK2wzb2FuOEg1Q3BsJ00yZTRYYStmVzI6RyFkJU1wSD86bCFULnRtaVxIK0UzNXRoRF8xSShsLlpwLFlvRkplbylaKyNqL1ZMJVctLl5eXFtjN2xMQ006JGZccEVAIikpTEczQih0ZDFtVSE9bkNURiFwNEFGcChNTkU1dEYqODtnQ25Zc3BJXmEwVDlwPiZsO15aaCtUJUxYWW5gKCVZV0g5ZltdcjshNjFEdU8pb0kkTUdSSGAnPDo9bmYmIyFBKSFAQHUwa1dCIjsxPGEqSyVSKFxlaC9DX15NcDc8cUlRQDRzS10iMCp1cF9kNlVIR1Y1P1JFbU1GIjRAVVxHT0g5WGlYJj4/SV5fR2M5R0ZoZ2hsXSpnSXFNQiYiVkpGUzBSQ1JWK1poR18uVi4zPmRbIUI4JF8jJT5tanF1cGRuRCszb0dFMWpgOEI6QUhYKjdnZFdDbGFZKFA3Wj5LQCdXJi5gXzJJXDtqXyM4cGA2QzZTP1ZtWXFfX2deZFMiSm45SiIiWyFNSzpxLjVZLidgdWNfRycjPmpBQ1MnOzs9KixGV2QtVCNeSXM2Y1dJYlZHbmQhKk42TU9kJmIkS0MmIm9bYlAxREZcMDM+cVMhKE9iaiFfZWxXQ246YSIzQXJhOi06dEtZT1Q6dGgsRWBJZUhSaC5yUGknbl0/alVxdCgvUEkhWmFFXSJNMnVIRS8hPDBpXmhPc1NTPVppTkUpVU0mPCdrLGgyWGI/UWc7U2NjLy81cmZqZGo5MmZnOU1COVtkNzIsLS1sPzk2KEQrQWJoY1U6WS1lQE9wVGNHNlFLUDhxTlVJTSFJYDMrO1AuLFhgcl8hR0UpLj9ZJjVhLSg9OTA4OyM3Lmk2JThPT0wiNXBSJltqOllJRmVlUjwkMVgxY0pRPV1SQElsJ0RKOkZmXyNvSTRhMihYJDtrTGgpKF8/Ul8xWjchUyVAPTNpYjdxJzItYnRbMlBTXjhbRldKWTM5MmhqRDQlcEtLSTlmYj5IYks9WVFfNmJQYU1VPU9TU05QbTUvYjNHVF5CVCopZWEyXWY5PCpBb090NXA0PVJbM1g+WGkxWFsjZUZmS2Yoc1onSj1zIitvPDRCRHI6PFYnXERXQTpFYywwNUFDZS1yRF1nXFZnOXRmRnNobi1iPDNyLilVM19hNmo9W1tmJmgwXzB0MDVfPkJdMW9eWFdlTVUvUSZfK0M/KEk9JF0+W1BlW1k3YDdST2tYLF09YWIvSFxcMTErYWciaCZQJ3MsNUojMWBoREUsUTYjRlwqaz1PWS01dCI8KDgwczJbLUA4azM3Yjo7bFRYLFIuT3QrOURiK2taKTpFcUAoOUYobHAsODpKZGAhT1BkOFhSUVYiU086U2gpNyMoSjRQUmdKSUA5NEciW2FmVmc2P3JLTkdOPiowVyEqUzpfTlRiS3MuZS9XLDUzLjMhRWRoPSUwMjAsOEMkODJYQy8nKGtgVHUmNyt1NlZiJFVaLyVxJUAqaFYqLTZwRl9abTg2QEwxa0oxXSlWKlhbJyNxaXFvLWAybmVmYUAtKEJLOSpJcyxNUE4vaWtXKXNxUzVLJSpYb0ZBL0hZKk9eM3EvSGxTTzRDUHFXN05AW29uTCdUK2AxYVxCYE5mLTNNTU1PJkZKMCE7T0ZXSjAiPlVqSidAVF5qWSFpSSpyTFpXTk5lL1QjZkVoS1UkaEMsT2hiW0hcT3JtYGs4c1hOVS8zLk1oXyczcVB0TzJYdSJFUl5yRDlDc0FJIVorKUZuR1Bxa2xyRUFcQWEuMD8/MzRbc21KZlheVVBhdVpEVzZdK2Bgb0NZOD9QcW45KDRZSzliW09EJVBbLVhKQG9mNWVHcjppUl1sPkdxayY/KUNjbm9jdEZtbyNHZ1JVSS87cy9VZltkS1k7N0Uva1lYLmlmYGRZXHFvOSg2QjZAJDlHPmpZRnNjIy1KKz9dOkgyOERLPEhyVGdgYFs4QHRyPEUyUFJETmtjVUFKS3J0WiInPilPVUVHLl0/InAxTVByWWVRaXMuLkYzaiU9QlIlKUgpYVYia05WRSNEXSc1QGouRTpaSzwpVDc0cFY0VE9iUnRdUyVYTy1laSU2JEd0VDx0OCEtIUZkbF1VMFBzMz5gWGs2SnR1WC48J2hmJjZncydbOHBdV0E0QzdxR3EnSmlWSG5kK0dhb0RQMGFJU05CcWxOYFpWbz1pOEAkV19jQUE3NTRObVQ9M1g2Q2Q0RCExRF8kcyVJT0s7QFI2a2xJSyg+cypMSkIxL1AiSks4LipoNjdYJy0xMW5eckJHNVozQkRpXSRNRCciQT9fcjRMZlljJ2AhTU44I0xCcVM+YUMuRWQsXE8pPWhURkRqTjFgVnVSSzVmM0twOzEncnUtOytUPiFKVWNgXy5MckQwPDw8bVQnZDVUW0ZoQTlDciYwK00oUXMsYmM4TSwjXlxRUmAhYU8vOU5rKyMwbFVFanQjJTBBXS50O1dscTFHJztlPj8oTFVqLEo1KHU7RlRsIytgP2JMaitvTkdYOF9oS1UjRUREZzdmUUtvPDVBIT5xQ0I2RzwhOW03V0hYLHBXMUlnMnAiaDFWZmNrOU0iNSoySCVMUzpubG5VT2xlZmJkVFAvMmdkZ0s+TDA5V1xTbVwuVTsobEs7ZUNKI1ZHbWU7ckdSP2tRViJHI1w4bGQwXTpKUkI9QWRkISInbGwkJkVdNEFKXSteTzJMTSFnY1VAdFpSTU9ZbExvZ2lrVlNIYzJTVGxqdFRaSClSRz8jci9jQyl0L0ZtMSNqLy00R3BxYWQ+VTI6P2E5aTNSN1gqVWpLX0Fdb1E3Nz0lSVgnSWVYSmpnUDt1LyEoby4ycTRsNm9Na2MhV0wjdCIjY0dlUU5HVE9bLTlqLl1iOWByJ0NzKk5EOnReRypYdGdMT2gldEFSTS03I1lBNl9VLj1Mc0JCKDlwTmw/YzhRa05vPkI1OSpxSz88ZyNCPTE1RVY6SDZOQEMmM3ApS0JGVG85NzhsMlxAKDVhK01yKyJpWCMtcmFvSTZRMCNhV1UtUkdxbmFZXGQ9IWJLJGw+XSY9XSo6dTooRzVIQVNBKixkc1RsaSg/S0JCN1NQXjQpNCNTK0dyRXA+YmQmKCJ1cmBqNW1iVk1eYW9dXXRMI3NmQihQKTJaPD04SHFGXlpaZFw3KW9VPmArcm1UMTBwbUg4OSs5KyJlR2c9QU5mTCdrNFUjTy1QcFsrazdVV0x0bisxb2lhVk1rVFE7KFEqLmZuSUFmIjQ5R14yIUtoNjRjNDo2VUc5KipPUVI4PCoiPlFcPVZvR1IyVCpmdSYhPlA5VCE7KjQ0W1s+NVs8XEVYY1tXMC9dXENpcGQwbzJqXVw/NG1VIilMK0QkSi1vXHByXG9haFRYPWRJcU5XJUpDVmpONTp0QEFTXFhcWzs3VT1PO0tEJywvbVJmJj1YcUxIPGNcKGFfVz1wRkImLUU8OCYjdGg3SENAO2NeQTBuWzFyPm0vTDI/MzZxV15vXSV1YSdDZGMoZickOHBTKzVeXl91azQiR2lAJyRRTVVxb1dSLmtObjVVdS9lbUtobzBeVj1bbjFTTmJcPzpHVSdvJmssS2Q0LG1CRTdoITdKOj8pMENJOz5CK0xVPVNpdT8/Y2RbWGA8Rkhja28lTyFEKnFLPHEmLG0/TUYzTW9DRyw6STRARTdfPFVhRWxgW2tbO1s7cUZHKE44YWthV05vNGlhOTIuQm8sTzdOVWYvQCljRjlBSTMibzxGJ3RLXnRTITVjU0VeVkE2JjVJZ3NgbE91WztVa2ROLm89PlNsRjgtQCdKUVVVWDgzPTMqS1cvUGxBSDMwOURMOFBORjR1N1hNS0lgMyJcXmdmOm1ISE8qNi0kLUxyTktaO0AiRkRWXHVkLVoxJj9aIk9kLjRdJ2ctTkQiQFpGW2hNZExPaks7Ii9lZjUmVylGJmp1OGwrPk1bSUpMaVc5RyxXSkA1XG5mMC5OPCM5STohKDxJO25GKyFtP0hDZChlPEBgQj1fb2NsaFxWLGRiUWByMjstRmowcF9POEA8OVdHKlN0Tm83O1NjSmJBLGY1OmxhKkk+WkVfdS9RdClQPFNWT2BqWydrND4/dDMsZ3VmSk1rMXQyZFxwUTonb1VrNW0icE4/ITw0bXFtOUVObGRWbUFQZDUzXUZFYzJtYUdrPmdlSy07QkFPOz9vOTRnb2VgQmRKZlw3NmZsZmQjJGhXLlFVL2M+Jj5uJjckLkNBZ2RVXkpBcl9QbVloUUdSTStSNFFzbEU2PEs8b3A1aVlpVmhkUEswRzM7UUk7WmkoOF5uJ0xBTS5AJDA9dTQ1Vk1hXkpMcUQtUiZdQyxqXlxuTGJTQUlkNkJbQmc7Om5wYnBBO1o5OyVySForRV02WEhiaTkpZGY/Zyw0PFRhUUE7Z0NDVFwxQFRLWGN1Y2wzUWNLZkBlJ1xSVGYqUkkyTV5YRC9ZSXJqIT9DIiZpMSo8RVw2XixUck9jQWtaJyU5aWkpaFZWbnRAYSRyXG9qX2hZZk9oTnQvcFBUVUtQX0NVLmFtOWdWMDhea1ttNjJBdDczNFY3YXJPSTRuMjAzQV9oJGExZE1bY2BUcDhMYmIoYDklMEFxWlNWYWlEO2w9VTw2J1ZLN1RDbzNKJjtnIz4nIjlrOWotdCwmbyUhcGFLIjNccXA4TlBqc1k+Kl8rO15zOT8sRHVcZmtnRGROLyRGK3NrSz9TPihnNm4yN1QvYW5FUV5JQ25QM1paOi5cZEdZKShtMW9hZCdFKjRZJm5nN1JvSyVcclE4XD1kKDdkKFEmWz82Vi1aXWU4TklVRj0kJ10kRTBcSFBZY0gwcGFccTFTKGw3UmhKWyhPcUolNCI0S2JkPEpQXjltU1hjUDNHZCFRO2opTlRCWTErLTBHaVBmXktMYlRSN0lbO2MpS2JcaUNpNEVwXEohSUZZOWdaRFs6UkdcMm4pRD5iKlZJPmQlUmA9SFpcKUhUSGFAPEdiSyxZYnMqOElFXlskIitmZ2VDby1jQV1vaV1DUyhgaTNcNVpVXz0pdThkNU81TlZtLC1sJVIzNm11LS1TP2ZlTD4hdDs2RVkwOF0pJVIoNWZpPGohOCIrNV1wSmdXYzZsYD1XWSNSTyEnZy5TblhgX2tjRHAxX01eKF00Rz1kTiptYkJqSWw3LmNyNmlOSlxPJi8iMTY7MDtlVzw2WWtHXG1kMldLQCZYdC0+V2kkLC83bWc6VyZzLE9MTjpscCxKLzBUb0hIbSRyUVNXN1hZIlBmJmlOZ3EhX3BtdDNMX3EwOEclYjwrVGZTTmw9XE1pViZNRnJhZGpWLVZAYGBtTCwrSlJOOj9vUVZjcnNTVV5iTzwvbEwrNUUnbHI/J1JcQEpnazxTR2M9Z3FyKkZxdDNDI15ETiRGcUIjcTE0Lmx+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDAyMjkgMDAwMDAgbiAKMDAwMDAwMDM0MSAwMDAwMCBuIAowMDAwMDAwNDI0IDAwMDAwIG4gCjAwMDAwMDA2MjkgMDAwMDAgbiAKMDAwMDAwMDc0NCAwMDAwMCBuIAowMDAwMDAwOTQ5IDAwMDAwIG4gCjAwMDAwMDEwMTggMDAwMDAgbiAKMDAwMDAwMTI5OCAwMDAwMCBuIAowMDAwMDAxMzY0IDAwMDAwIG4gCjAwMDAwMDUzOTcgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8ZmMyOTYwZjNkYTM3NThhYzhmNjgxNDAyYmI1OTUxNGQ+PGZjMjk2MGYzZGEzNzU4YWM4ZjY4MTQwMmJiNTk1MTRkPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKMTAwNzQKJSVFT0YK" download="Yogesh_Mahindrakar_Resume.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+            Download Resume
+          </a>
+          <a class="btn btn-ghost" href="mailto:yogeshmahindrakar24@gmail.com">Email me &rarr;</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173" target="_blank" rel="noopener">Connect on LinkedIn</a>
         </div>
-        <div class="tl-company">Cirtru Classifieds Pvt Ltd · Mumbai, Maharashtra</div>
-        <ul class="tl-bullets">
-          <li>Managed lead generation campaigns and professional client email communication</li>
-          <li>Handled high-traffic Facebook Business Pages — drove audience growth and engagement</li>
-          <li>Executed SEO strategies and paid ad campaigns (Google Ads, Facebook Ads)</li>
-          <li>Analysed campaign performance data — built strong analytical and user-behaviour skills</li>
-          <li>Built deep expertise in product features and user journeys — foundation for QA transition</li>
-          <li>Recognised by management as high performer — handpicked to join QA team in 2024</li>
-        </ul>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dots"><span></span><span></span><span></span></div>
+          <div class="terminal-title">yogesh@cirtru &mdash; qa-suite.sh</div>
+        </div>
+        <div class="terminal-body" id="terminalBody"></div>
       </div>
     </div>
-  </div>
-</section>
 
-<hr class="full-divider">
-
-<!-- ── PROJECTS ── -->
-<section id="projects">
-  <div class="section-label reveal">Project Experience</div>
-  <h2 class="reveal">Key Projects</h2>
-  <p class="section-intro reveal">Real-world QA work covering web platforms, native mobile apps, and full release lifecycle validation.</p>
-  <div class="projects-grid">
-    <div class="proj-card reveal">
-      <div class="proj-icon">🌐</div>
-      <div class="proj-title">Classified Web Platform — End-to-End QA</div>
-      <div class="proj-desc">Tested a high-traffic classified platform covering property listings, user registration, search filters, and contact flows. Conducted cross-browser testing across Chrome, Firefox, and Safari. Performed regression cycles on every sprint release.</div>
-      <div class="proj-metrics">
-        <div class="metric"><div class="metric-num">150+</div><div class="metric-label">Test Cases</div></div>
-        <div class="metric"><div class="metric-num">40+</div><div class="metric-label">Critical Bugs Found</div></div>
-        <div class="metric"><div class="metric-num">12+</div><div class="metric-label">Browser Bugs</div></div>
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat reveal"><div class="stat-number"><span class="stat-count" data-target="6">0</span>+</div><div class="stat-label">Years at Cirtru Classifieds</div></div>
+        <div class="stat reveal"><div class="stat-number"><span class="stat-count" data-target="3">0</span></div><div class="stat-label">Platforms tested</div></div>
+        <div class="stat reveal"><div class="stat-number"><span class="stat-count" data-target="3">0</span></div><div class="stat-label">Browsers covered</div></div>
+        <div class="stat reveal"><div class="stat-number"><span class="stat-count" data-target="4">0</span></div><div class="stat-label">Projects led end to end</div></div>
       </div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-icon">📲</div>
-      <div class="proj-title">Mobile App Testing — Android &amp; iOS</div>
-      <div class="proj-desc">Tested Android (v10–14) and iOS (v15–17) apps across multiple devices, screen sizes, and OS versions. Identified platform-specific crashes, navigation issues, and UI rendering problems. Validated push notifications, deep links, and third-party integrations.</div>
-      <div class="proj-metrics">
-        <div class="metric"><div class="metric-num">2</div><div class="metric-label">Platforms</div></div>
-        <div class="metric"><div class="metric-num">A10–14</div><div class="metric-label">Android</div></div>
-        <div class="metric"><div class="metric-num">iOS 15–17</div><div class="metric-label">iOS Versions</div></div>
+  </section>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">Product knowledge first, testing second.</h2>
+        <div class="about-copy" style="margin-top:20px;">
+          <p>I joined Cirtru Classifieds Pvt Ltd in <strong>September 2019</strong> as a Digital Marketing Executive, running lead-generation campaigns, managing the company's social presence, and working on SEO and paid ads. Four years of watching how people actually used the platform taught me more about the product than any handover document could.</p>
+          <p>In <strong>2023</strong>, management moved me into the QA team to put that knowledge to work. Since then I've been doing functional, regression, smoke and sanity testing across web, Android and iOS, and I'm currently building automation skills with Selenium and Python.</p>
+        </div>
+      </div>
+
+      <div class="tc-card reveal">
+        <div class="tc-head">
+          <span class="tc-id">TC-001 &middot; Career Suitability Check</span>
+          <span class="tag-neutral">Status: Pass</span>
+        </div>
+        <div class="tc-meta">
+          <span class="kv">Priority: <b>High</b></span>
+          <span class="kv">Type: <b>Functional</b></span>
+          <span class="kv">Module: <b>Career</b></span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-block">
+            <h4>Preconditions</h4>
+            <p>Four years inside the classified platform's marketing side, with deep familiarity in how users search, list, and convert.</p>
+          </div>
+          <div class="tc-block">
+            <h4>Steps</h4>
+            <ol class="tc-steps">
+              <li>Build hands-on product knowledge over 4 years in digital marketing.</li>
+              <li>Get recognised by management for consistent performance.</li>
+              <li>Move into Manual QA Tester role in 2023, product context intact.</li>
+              <li>Ramp up on functional, regression, smoke and sanity testing.</li>
+              <li>Keep growing: Selenium, automation and Python are next.</li>
+            </ol>
+          </div>
+          <div class="tc-block">
+            <h4>Expected result</h4>
+            <p>A tester who understands why a feature matters, based on real product context.</p>
+          </div>
+          <div class="tc-block">
+            <h4>Actual result</h4>
+            <p>Same as expected.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-icon">🚀</div>
-      <div class="proj-title">New Feature Pre-Launch QA Cycle</div>
-      <div class="proj-desc">Reviewed requirements and user stories before development to catch gaps early. Prepared test plans proactively during development. Conducted UAT-level validation to ensure features met real end-user expectations before go-live.</div>
-      <div class="proj-metrics">
-        <div class="metric"><div class="metric-num">Early</div><div class="metric-label">Gap Detection</div></div>
-        <div class="metric"><div class="metric-num">UAT</div><div class="metric-label">Validation</div></div>
-        <div class="metric"><div class="metric-num">Agile</div><div class="metric-label">Sprint Model</div></div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Skills &amp; Tools</div>
+        <h2 class="section-title">What I test with</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4>Testing Types</h4>
+          <div class="chip-row">
+            <span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Smoke</span>
+            <span class="chip">Sanity</span><span class="chip">Exploratory</span><span class="chip">End-to-End</span><span class="chip">UI/UX</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Platforms</h4>
+          <div class="chip-row"><span class="chip">Web App</span><span class="chip">Android</span><span class="chip">iOS</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Browsers</h4>
+          <div class="chip-row"><span class="chip">Chrome</span><span class="chip">Firefox</span><span class="chip">Safari</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Bug Tracking</h4>
+          <div class="chip-row"><span class="chip">Jira, Full Lifecycle</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Documentation</h4>
+          <div class="chip-row"><span class="chip">Test Cases</span><span class="chip">Test Plans</span><span class="chip">Bug Reports</span><span class="chip">Test Summary Reports</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Methodology</h4>
+          <div class="chip-row"><span class="chip">Agile / Scrum</span><span class="chip">Waterfall</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Works closely with</h4>
+          <div class="chip-row"><span class="chip">Developers</span><span class="chip">Project Managers</span><span class="chip">BAs</span><span class="chip">Product Owners</span><span class="chip">Business Team</span></div>
+        </div>
+        <div class="skill-group learning reveal">
+          <h4>In progress</h4>
+          <div class="chip-row"><span class="chip">Selenium</span><span class="chip">Automation Testing</span><span class="chip">Python</span></div>
+        </div>
       </div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-icon">🔄</div>
-      <div class="proj-title">Regression Suite Maintenance</div>
-      <div class="proj-desc">Maintained and updated a core regression suite covering all critical business flows. Executed full regression cycles post every sprint. Tracked all regression defects in Jira with severity and business impact prioritisation.</div>
-      <div class="proj-metrics">
-        <div class="metric"><div class="metric-num">1000+</div><div class="metric-label">Test Cases</div></div>
-        <div class="metric"><div class="metric-num">Every</div><div class="metric-label">Sprint Covered</div></div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Work Experience</div>
+        <h2 class="section-title">Where I've been</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item current reveal">
+          <div class="timeline-tag-row">
+            <span class="timeline-tag">2023 &rarr; Present</span>
+          </div>
+          <h3>Manual QA Tester</h3>
+          <div class="company">Cirtru Classifieds Pvt Ltd &middot; Mumbai, Maharashtra</div>
+          <ul>
+            <li>Review requirements before development starts and flag anything unclear or incomplete.</li>
+            <li>Write test cases covering the normal flow, edge cases, and what could go wrong.</li>
+            <li>Run smoke testing on every new build before committing to a full test pass.</li>
+            <li>Own functional and regression testing across web, Android and iOS.</li>
+            <li>Test real-time functionality, like WebSocket-driven updates, thoroughly before it goes live.</li>
+            <li>Log every bug in Jira with clear steps, screenshots, and expected vs. actual behaviour.</li>
+            <li>Follow each bug through to retest and closure so nothing sits unresolved.</li>
+            <li>Write a test summary after every release so the team knows what was found.</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-tag-row"><span class="timeline-tag">Sept 2019 &rarr; 2023</span></div>
+          <h3>Digital Marketing Executive</h3>
+          <div class="company">Cirtru Classifieds Pvt Ltd &middot; Mumbai, Maharashtra</div>
+          <ul>
+            <li>Ran lead-generation campaigns and handled client communication for the platform.</li>
+            <li>Managed the company's Facebook presence, its content and audience growth.</li>
+            <li>Worked SEO and paid ads on Google and Facebook to drive leads.</li>
+            <li>Tracked campaign data to improve results, which is where the analytical habit started.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<hr class="full-divider">
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Project Experience</div>
+        <h2 class="section-title">Test cycles I've run</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-head"><span class="ticket-id">QA-101</span></div>
+          <h3>Classified Web Platform: End-to-End QA</h3>
+          <div class="tag-row"><span>Web</span><span>Jira</span><span>Chrome / Firefox / Safari</span></div>
+          <ul>
+            <li>Tested listings, registration, search, filters and contact flows end to end.</li>
+            <li>Wrote test cases for normal use, edge cases, and things that shouldn't be allowed.</li>
+            <li>Caught serious bugs before release, including a few that only showed up on specific browsers.</li>
+            <li>Ran regression checks after every sprint to protect what already worked.</li>
+          </ul>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-head"><span class="ticket-id">QA-102</span></div>
+          <h3>Mobile Application Testing: Android &amp; iOS</h3>
+          <div class="tag-row"><span>Mobile</span><span>Multi-device</span></div>
+          <ul>
+            <li>Tested across Android and iOS devices with different screen sizes and OS versions.</li>
+            <li>Found crashes, broken navigation, and rendering issues on specific devices.</li>
+            <li>Reported bugs with device, OS version, exact steps, and a screenshot.</li>
+            <li>Retested every fix and checked nothing nearby had broken.</li>
+          </ul>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-head"><span class="ticket-id">QA-103</span></div>
+          <h3>New Feature Pre-Launch QA Cycle</h3>
+          <div class="tag-row"><span>Requirements Review</span><span>Sprint-based</span><span>Real-time (WebSocket)</span></div>
+          <ul>
+            <li>Get involved before the feature is even built, flagging unclear requirements early.</li>
+            <li>Write test cases during development so I'm ready the moment the build lands.</li>
+            <li>Test real-time features, like WebSocket-based updates, thoroughly before launch.</li>
+            <li>Validate the feature from a real user's perspective before sign-off, beyond the checklist.</li>
+          </ul>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-head"><span class="ticket-id">QA-104</span></div>
+          <h3>Regression Suite Maintenance</h3>
+          <div class="tag-row"><span>Regression</span><span>Ongoing Sprints</span><span>Jira</span></div>
+          <ul>
+            <li>Keep the regression suite current as the product evolves.</li>
+            <li>Run it after every sprint to catch anything new code may have broken.</li>
+            <li>Log regressions in Jira with enough detail for a fast fix.</li>
+            <li>Kept the product stable across releases over time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ── JIRA LIFECYCLE ── -->
-<section id="jira">
-  <div class="section-label reveal">Process</div>
-  <h2 class="reveal">Jira Defect Lifecycle</h2>
-  <p class="section-intro reveal">Every bug tracked systematically from discovery to closure — nothing falls through the cracks.</p>
+  <section id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">How I Handle a Bug</div>
+        <h2 class="section-title">Jira defect lifecycle</h2>
+        <p class="section-sub">Every bug I raise follows the same six steps, start to finish.</p>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">1</div>
+          <h4>Raise</h4>
+          <p>Log the bug with clear steps, screenshots, severity, and expected vs. actual behaviour.</p>
+        </div>
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">2</div>
+          <h4>Explain</h4>
+          <p>Walk the developer through it so they understand exactly what's wrong and how to reproduce it.</p>
+        </div>
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">3</div>
+          <h4>Track</h4>
+          <p>Check status regularly (Open, In Progress, Resolved) so nothing gets forgotten.</p>
+        </div>
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">4</div>
+          <h4>Retest</h4>
+          <p>Once marked fixed, I test it again to confirm it's actually resolved.</p>
+        </div>
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">5</div>
+          <h4>Regress</h4>
+          <p>Check the surrounding area to make sure the fix didn't break something else.</p>
+        </div>
+        <div class="pipeline-step reveal">
+          <div class="pipeline-num">6</div>
+          <h4>Close</h4>
+          <p>Mark it closed in Jira and fold it into the release's test summary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Desktop horizontal -->
-  <div class="jira-flow reveal">
-    <div class="jira-step"><div class="jira-num">1</div><div class="jira-name">Raise</div><div class="jira-desc">Steps, screenshots, severity, priority, expected vs actual</div></div>
-    <div class="jira-arrow">→</div>
-    <div class="jira-step"><div class="jira-num">2</div><div class="jira-name">Explain</div><div class="jira-desc">Communicate clearly to developer for accurate fix</div></div>
-    <div class="jira-arrow">→</div>
-    <div class="jira-step"><div class="jira-num">3</div><div class="jira-name">Track</div><div class="jira-desc">Open → Assigned → In Progress → Resolved, monitored daily</div></div>
-    <div class="jira-arrow">→</div>
-    <div class="jira-step"><div class="jira-num">4</div><div class="jira-name">Retest</div><div class="jira-desc">Verify fix against original bug criteria</div></div>
-    <div class="jira-arrow">→</div>
-    <div class="jira-step"><div class="jira-num">5</div><div class="jira-name">Regress</div><div class="jira-desc">Confirm no new defects introduced by fix</div></div>
-    <div class="jira-arrow">→</div>
-    <div class="jira-step"><div class="jira-num">6</div><div class="jira-name">Close</div><div class="jira-desc">Formally closed and added to Test Summary Report</div></div>
-  </div>
+  <section>
+    <div class="container check-grid">
+      <div class="check-col">
+        <h3 class="reveal">Core Competencies</h3>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Involved in testing from requirements to release</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Finds issues before they reach users</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Explains bugs in a way developers can act on</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Knows the product inside out after 6+ years</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Comfortable testing web and mobile platforms</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Works well with developers, PMs and business teams</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Thinks through edge cases others might overlook</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Keeps documentation clear and useful</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Adapts to agile sprints or waterfall releases</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Takes ownership of bugs from raise to close</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Picks up new tools and processes quickly</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Currently building skills in automation testing</span></div>
+      </div>
+      <div class="check-col">
+        <h3 class="reveal">Career Highlights</h3>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>With Cirtru Classifieds since September 2019</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Moved into QA in 2023 after being recognised by management</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Tested web, Android, and iOS platforms</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Involved from requirements through to release sign-off</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Manages regression testing across ongoing sprints</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Uses Jira daily for bug tracking and follow-up</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Works directly with the full product and engineering team</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Tests real-time, WebSocket-driven features before launch</span></div>
+        <div class="check-item reveal"><div class="checkbox"><svg viewBox="0 0 20 20"><path d="M4 10l4 4 8-9"/></svg></div><span>Currently learning Selenium and automation basics</span></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <!-- Mobile vertical -->
-  <div class="jira-flow-mobile reveal">
-    <div class="jira-step-m"><div class="jira-num-m">1</div><div><div class="jira-step-m-title">Raise</div><div class="jira-step-m-desc">Steps, screenshots, severity, priority, expected vs actual</div></div></div>
-    <div class="jira-step-m"><div class="jira-num-m">2</div><div><div class="jira-step-m-title">Explain</div><div class="jira-step-m-desc">Communicate clearly to developer for accurate fix</div></div></div>
-    <div class="jira-step-m"><div class="jira-num-m">3</div><div><div class="jira-step-m-title">Track</div><div class="jira-step-m-desc">Open → Assigned → In Progress → Resolved, monitored daily</div></div></div>
-    <div class="jira-step-m"><div class="jira-num-m">4</div><div><div class="jira-step-m-title">Retest</div><div class="jira-step-m-desc">Verify fix against original bug criteria</div></div></div>
-    <div class="jira-step-m"><div class="jira-num-m">5</div><div><div class="jira-step-m-title">Regress</div><div class="jira-step-m-desc">Confirm no new defects introduced by fix</div></div></div>
-    <div class="jira-step-m"><div class="jira-num-m">6</div><div><div class="jira-step-m-title">Close</div><div class="jira-step-m-desc">Formally closed and added to Test Summary Report</div></div></div>
-  </div>
-
-  <div class="learning-card reveal">
-    <div class="learning-icon">⚙️</div>
-    <div>
-      <div class="learning-title">Currently Learning: Automation Testing</div>
-      <div class="learning-desc">Actively expanding into Selenium and Python-based automation testing — building on a strong manual QA foundation to grow toward a full-stack QA role.</div>
-      <div class="skill-tags" style="margin-top:14px"><span class="tag purple">Selenium</span><span class="tag purple">Python</span><span class="tag purple">Automation Testing</span></div>
+<footer id="contact">
+  <div class="container">
+    <div class="footer-head reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Looking for my next role.</h2>
+      <p>I've spent 6+ years at one company: 4 in digital marketing, the rest in QA, and I know what it means to own something end to end. I'm actively looking for my next role now, ideally Manual QA with room to grow into automation.</p>
+      <div class="footer-cta">
+        <a class="btn btn-primary" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDYgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GMyAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0NvbnRlbnRzIDExIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0Y0IC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNyAwIG9iago8PAovQ29udGVudHMgMTIgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyAxMCAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDYxMDA0NTM0NiswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MDYxMDA0NTM0NiswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoXChhbm9ueW1vdXNcKSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iagoxMCAwIG9iago8PAovQ291bnQgMiAvS2lkcyBbIDUgMCBSIDcgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAzOTQxCj4+CnN0cmVhbQpHYiFsIj5CPzpUJnE4MDFrYS9XUENiM0cnXnRcQj9jNXBWaGoyQ1hsRyx0MGgmZ00rIkAnZyM8OyxyKUNsKC5wL0QnVz5CRz5JOzwnaGM9cl90PCdWWUloJUEyWj5dNHBFVGs5alV0bjZHLy8rVkVYSWhGcS9DVGRhLVktT0hLTl4lNGlfUmVhKztUXFhNRlFtXUZEJ3VxUG91SUNGNjpZIlJfaThuVUdAbVlvR2ldK3I7ZUNqRzNGNy8ydCMuR1hSYlYzJVBFUSliIWU4SFNHcyE1XU4xanI6Imp1SmZnQTYqJzExaT1bLEBZUVBpUVdLJ1VsIlN0OUVcVmshOWQlV0MkKmpHQD5JOUtlMFM6TjYrY2MySmM2RFFNY05BcV8wOyM7aVwhY3VlUyRacHFFKCswNzBlNFU0Ml1oZjIhOi8uQ0NAXU9FPiY1RDJbOVBbIjdRMiRbTDQjSl5SLkw3ZEQrKi9nJyFpRjhNJE0wdWMhZDJdY2FvIz9CMVQiNi5EclZWPCsib1FLMS5ZKmUnLFpMYG0zKGQ9TkxvSzwoIVVtMGEzJV48ckdbImBoLUxPIkJxY2hDcy5iJnAvI3JtLzpZPzhMWnFfNGhAKktAamVCV0RVO2MpLjkvIj49LC9oOEAoTGtCXkBBN2VLQC9bNFUsQ2Q4WTxzRktqMjpRYFxOWHAmQDF1UXE0PzliVm5iPksyTVFLcXRvIWpnWTcvJF8ySHJzMzQuTGRqRmplTUFOdGI/WG8kNGFoVHRWKiVaSihDJjVGcHVNS3UyUlE7KVlNNUpKWGtXc3ErYl4wUlFaXlooKmthbFpvZXIxdS1qQEUwalE6PkcyV0AnXzglNj50Jl1eWShNaGh0SEs4ZyNJQHFLR1MqYD47Sy4lWDBFdTMoMTtLQXMkJlpRPlc7OVcjOyIzazY1NyxwSGEvSnE1Nig7RCd1MUkwWDkzbihxTEM3T0tvOCNYbCs5dWwjRTdaYCRMTEMpUkA/YiQkbEgpTytKP15xckJsZVs3YVsjVSVJMlBxbDY0SGIocSlkckpmdTMlI2NBOFo0bjZmKC8wLWotVy5WbSo+cjhacFgmJEJiWSRxQ2Qja15bUUIlMSwiaGApLz5IKyxlYC1bK0BcRTwlKFgyMVUlJiFAcys9MzpJPSpoZzVGWShIQk5WUUNPZjkkNVE2R1pLKTxxKEMmNmM8LTBJZC03LzAtJGEqKiFFIidxYiU1MjlEVDVfSUE9QzVlL2A/bkZqNms2RSRIcjo8Lm8sYlwtVC4sZE5iNTs1bDEzbDxQPmQuSXRYIVkiMDRFI21eR1pVP05XTDM3dUM2SSQzNmotaTMrV0A/cCQlPFAjKE81WG03X0lZLHBxWkNIVnRmST0vbTRbQ2lzMGBJVHBfVyldViZnXkJWbk9BVm1cTTFlazU6VWJdPUojOzxab0djPHQxQkBNXmJLakgjYnE0KW1adGEzSGZsWCNzbG5EU3JNNVMoNkhcbS8uXFFJUUtQUV1nMWdlU3QyRVlJI1ZbbE5hMk0nWihgWVw/UzknMmlURmdocG5QJjZZVCVxLEsjcDBZTm9cZ2I+ZyNZKiJARzwoZEZFay1CUGlwVkQvZi5kNSZKKmNkMTFMRjslNEYzZnRtbDFLJD5rVTJwODtZJGYsN1k/WyxydWxxP0FIZy1KWjo9PUZ0K1tCXSdYOlBQXGNpV2Z0aHJUKikvSXIpUVgmLTpYS18yPm5ATkpVSyxGRFNcb29paC5EPjVXVjVgbVdMOUhldUpWZzBUaitONDpzb0Q0PlRwKWBeJkZPUTNxYCROYmR0MUBTW2FiQWNpPVlgKmNULmdcLm1hMFE1WWNTUG5fLjpyQShfV0RYRFJqT1gkLTd1IlozcE9QViNBTF5oZjw9PDRubmZ1NSYtbVFYaC1aQ08oNDoya3ImRDhOUlVfIXRtc1ppJlQ/Pkw2Y19qR0NwYyg2Mlo3KEg7byxNbF9baCJANmgwSGQtPy1WOypiISt0WFFqVkhIOC8mUj1lLUtiMlMrMkkjamtfQyhuTlBbJThIKTRWKllHRkxfYDRuKTMrPCU9LC1ERzE5JnQoWnAzIlhzO08tWEdNXmxvOz4uI05kXjpccjg0LEVYUGRHT004L3M/TkI2NFwzX2c2RChqayYpckNRWitaVjxWRVpAay5DNlFJQTVzcjEvNkhzbXJuLyRyMGpNcm80LkBNRz1tPkRRcUE9WTxvaTpyay1XRjxjXikrJT1WVyxOMlcpK0EtImhaIWQtb2MxU1VJNnBWanNhYTs3IV5mQCIscGpTZFkxL1V1a1orMUlgNmVWWmNSLktpIXRfcEUlKVMjMmtQaWJJLjoxVjdValpeXm8tIj9XLnV1Oz5PIy9gMD0oJiszci9dS0IjMlEqTThyRHM3YmFQVDtta0ZwcnMxYEI8dFItb21rakosR1ZITHI+VDUxL0xePVlcKF9oaGE5bSlwZnRaY29WUkg7VGplZ0UiT1wyU0AnSks9OW0tWFI3aClyJzxnUmldQFsiPEpPXHUnNCNdWGIvIjUuRk9gVUNnJTFqS1tOJCo0c2YyZzpGXi9GajBvV2ghbV9MYko8bmNEOUQwJUNxPEtBWEdtSEhfSWEnWClhS0dAOTgpQGA6SSshOyxbMWpAXUhQMGkvIyxIaVYqOGNXa0UqKj4kJ1o6PG5DXS4vUUFZZl9UI2VQVUJPYzpkPj08KEshXycoNkptX01xXjw1T21qaU5KIVwuV0xrJ2EmZ2ZMIjxXKihAQWZbZjJoVE8oaU9VYSNDWkY2PmdSMWlAQCpHYlZoWyU9RDI1LTxsWGpxaUFhJidJJzhCW3NwYT9Zb1RXJUhJTlc3QDtFP1kxb0ZWRHVOM0BeLipcOlEvQkFWSyNTJnNGMk0tJkglcEEtaUtbSmV1Y3JQY1NKPDE2WTFRX3RAUHRzJkJCJS9aNnJSMGhwPltqdD5nMiszUVlwVSM4JGBUWlN0bUFkVyZWPFdlSVtBQD4kU2ZpUi1JIm4uS0pnLFVgX0hvSWVnNTEycFpUPjQ/XVAsIkBQRV1ESDxVbUJDcjNzaUgsOiosXnEqOUhfa1pvQDVYIzxmcE9IIyNGTFA+bDZfM2E2QDZlMFRvVVFMTGxqYEciWyI+OmBnWkAtKWQqXyFPPFloYyMqbEcyTEJNIjVWdXVlJlxCRSN1UnJtUXQrNnFtKD1hNy5VYWRLMz5CJT8/ZSw+aj8iLFNQUDpJMkMmMnVbXypDXG1jMzVaVD42KFZrKVRmMVxqTUVnMmNYVF1aXFZlK19BYC9WNlNOZkZyNEwxMl8/RCllJC8+TmYzXkZdRTVYUVIsazBjcS4pJ1s5LHRXN1FBZV9kMisoZUFDNF1cZmNvS2BuRDc0aSs2cCgpcGNYYEdfU19vKjFKVXVQV1oyMmpwNkEyRGA9OjVoYTtGR1VOUlVVJUJTRmZpWW1EKGI0PmcxJyZxKWM4LU9gMFpuWF5TOjdLRy47KSFdaCY2LGUuVWE/T0EncF1rcFpzNVMvQ1ojVERaPHFKcW1sMCZbXjtibmJzRG9hKDlEbVMpb0E/W0dzOGdLS2goYCpOXiMlWDU7Lk1OLEwwVGlMRDQ3Y3ViL2FybEw4YiRUNFFUXktfTishTUptZmBhI1M4JlRgcWwyNWxXdU45MGoiXGZkSGQ6YjNOLGU9PmhoTzU8JkxzWFoiXGsrdTdfay8vUjBNQyNdWzxHNVRPRFYsciJqZTpLQXJuSl03SSRDQywmU1VrSl5cbFswZkpVTTNxJktpWTZGUl1OakZyPTsmW2QkL21uciVXVihUJ1JeajMrVmxrSGY9Vy04MUhqTWBjKCNXQDdRaUctOEZkRklEWjRwRDE9UVtdOGpkbTBZIm4hMDY0ZVM1bkl1QkM4QF0rO24jLTtGVEsqME5qPiEqdTk4KmAob0ZTNDBPSUBPVkBBczotbSlKJiQ8JStLJCwyOjhlVCtZUiMyLCVTPWo7WSomYDtsLF1WVFVCOk1RX3RGVlEwMmJVYnNmbk1VK0NGNWZCQ1k2L09eXWgsK0RoYUpeal5cay9vKTleUUxYJDdpMWEkXTU2RiJYU0JwTWkrVF9gbFVANUplIztFQnBCUF87SVZXQTZqbi1rQFpEQEFmXUE5Uic0ZWYiTDtaYnNRI0IkTC1jSDxkMWhTVlFLZjVnVUhdOFtEKU41SlQsSnQ0QTwqcU9EWSskN1Y4WD9OOi9zSjowKlxJMyErPFtfJUZoXTxDI2xoZkZbQCpfUVMnMXRfXkNeZkYlNz9ZJDQjKUZlLlk4NmxCS2VydWdSJE85Il9MI0BTaDpCMjY3KkorVThYTWkhLyRkXGxVTD9hYCwoSFsnPy0kTSgzU3VJVituMyo7XFdXTmZrTGVnV0FIMnJHM2NAXD0xcUo4MlltS2chR09xZzNnO0suMHRGJzFVSDQxYzxoJGI6UkgqTmFLQm1qbmFpcjxAOiluK2gyYE1zUV9bQUI7TSE9XiMhV1JwdV9eZEdULSlVOVApPHNVV21kWHBSV0NoMERSMjd1L2tDRlZzRjwrV0BoPkJKOl46LChZNywoRTpkaG9bMXFkNl9AXUFOMVRfVzNgIyE/RkBUKTVcK2pvUGw2MD47LmVUJUFNKTo9JVknKjwtNV1UKkMtJTYvPzxlRzBmTiRuTylTWFg9cFFcRXBJMFJyYUNzRmcwSTIzYXEsRVQpYnBJZmhqVj1aVjFRRWBULjREPTFqPlM/UVFPUzsyLkNoOjMtazw9TktNRVE+bUFHKCFAZyMlaFhqUFBAP2A0QXNbJXVhQXBybnNtZCNRTGUwbjJZXF9Ya043M0QzKDZYcUNXMDNdMG81J288ZCZDLj9gOm5xWypoRW8wXFNHc1tkWzk4MzB0VGdPZVdhO14hZFhpWCs2ZTZcNkBQIzdzNlJDU0w0XWlBcD9VYGRMSWJXTSNebC1zQkVXQjcjPlhVcEUxVStVREFyMlM0NChoZTUlK3BiI0w0aS5TUi0sNj9RMHQ6bTYqMltvJW9URDtXRVsrNUYmVWhtJWQ4Uytjb10+LSFKcXEnZ1dqPjhAbUNGMV9Bcy9FM3I2aDM3aU4scyhaVkNubEpKYmJcTDsqVj8hJlJIQURqJEwtM1llSEpETkMkKTZeXFlbcm00PV9iZSMpOiZwKzFzSnByO1shbjI5QSUzVz9LJFtPaEFVOyk3blhXPT00XEY/dElvRD5Kc21vdUsmTFUjZkpuRWJZZjlKW21+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggNDU4NQo+PgpzdHJlYW0KR2IhbCM+QkFPVyg0T1Q1XnNlPVFDTVVuSTcmaiZLXGs7OzxEQikvLmchOTNuK3NAN004WjNiRzc2Qz44cV01L1VTImY7Z1JxXnFvQ21jSVE1VF5LXXE5Qi9MZkZcJzdvL2hhR3FkSU1EcTpdO0RjIjc+cVxIQTJDMCViOj5sSGBPNGchVWBLcjZgbFowW0kzNCxNLXIpKixaOmdpUTFiMTJSKDMoMl1UL1Q0Vy5GZTEiNDxJJChlS0RDaDA8U2tQRk5KKEwiJl5HSFphdTpHZiYqKkxeRihIXDo9ND0sXlk6PFZfR046XTpLWGA5PihYUz07LWtJVCZuJVkxUCUtYVgjQzZMP2xVXGZjUCYoKlZLQ0FzJyRgQ19ual5rXWtYKC5tVG8ra2tgX24uZGglLWRJOXI2TDRQdDk4bDxyVVRROkUkYSpGODRdazdOJmJiJTtqQktQJkdlSGg9Ol5ASSxiMWs/UWtqSFlfYV8ycSwxaklrPi5fVUh0UjRIYGQ8JlouUXU2ZzY4Zic6JGQ1IW0rbjQua2g9UyhIMmJTdXFXPEY9KWlWZGhuXGRucGhJb2VHcSIrJDZLTjNJdCgzWCkubDohNTdGTmdJYj8sKGVENGUmX0BKJCxbI2tMM2VhVkIoVGcjIVtURitFb1o0cGhca3IzK2wzb2FuOEg1Q3BsJ00yZTRYYStmVzI6RyFkJU1wSD86bCFULnRtaVxIK0UzNXRoRF8xSShsLlpwLFlvRkplbylaKyNqL1ZMJVctLl5eXFtjN2xMQ006JGZccEVAIikpTEczQih0ZDFtVSE9bkNURiFwNEFGcChNTkU1dEYqODtnQ25Zc3BJXmEwVDlwPiZsO15aaCtUJUxYWW5gKCVZV0g5ZltdcjshNjFEdU8pb0kkTUdSSGAnPDo9bmYmIyFBKSFAQHUwa1dCIjsxPGEqSyVSKFxlaC9DX15NcDc8cUlRQDRzS10iMCp1cF9kNlVIR1Y1P1JFbU1GIjRAVVxHT0g5WGlYJj4/SV5fR2M5R0ZoZ2hsXSpnSXFNQiYiVkpGUzBSQ1JWK1poR18uVi4zPmRbIUI4JF8jJT5tanF1cGRuRCszb0dFMWpgOEI6QUhYKjdnZFdDbGFZKFA3Wj5LQCdXJi5gXzJJXDtqXyM4cGA2QzZTP1ZtWXFfX2deZFMiSm45SiIiWyFNSzpxLjVZLidgdWNfRycjPmpBQ1MnOzs9KixGV2QtVCNeSXM2Y1dJYlZHbmQhKk42TU9kJmIkS0MmIm9bYlAxREZcMDM+cVMhKE9iaiFfZWxXQ246YSIzQXJhOi06dEtZT1Q6dGgsRWBJZUhSaC5yUGknbl0/alVxdCgvUEkhWmFFXSJNMnVIRS8hPDBpXmhPc1NTPVppTkUpVU0mPCdrLGgyWGI/UWc7U2NjLy81cmZqZGo5MmZnOU1COVtkNzIsLS1sPzk2KEQrQWJoY1U6WS1lQE9wVGNHNlFLUDhxTlVJTSFJYDMrO1AuLFhgcl8hR0UpLj9ZJjVhLSg9OTA4OyM3Lmk2JThPT0wiNXBSJltqOllJRmVlUjwkMVgxY0pRPV1SQElsJ0RKOkZmXyNvSTRhMihYJDtrTGgpKF8/Ul8xWjchUyVAPTNpYjdxJzItYnRbMlBTXjhbRldKWTM5MmhqRDQlcEtLSTlmYj5IYks9WVFfNmJQYU1VPU9TU05QbTUvYjNHVF5CVCopZWEyXWY5PCpBb090NXA0PVJbM1g+WGkxWFsjZUZmS2Yoc1onSj1zIitvPDRCRHI6PFYnXERXQTpFYywwNUFDZS1yRF1nXFZnOXRmRnNobi1iPDNyLilVM19hNmo9W1tmJmgwXzB0MDVfPkJdMW9eWFdlTVUvUSZfK0M/KEk9JF0+W1BlW1k3YDdST2tYLF09YWIvSFxcMTErYWciaCZQJ3MsNUojMWBoREUsUTYjRlwqaz1PWS01dCI8KDgwczJbLUA4azM3Yjo7bFRYLFIuT3QrOURiK2taKTpFcUAoOUYobHAsODpKZGAhT1BkOFhSUVYiU086U2gpNyMoSjRQUmdKSUA5NEciW2FmVmc2P3JLTkdOPiowVyEqUzpfTlRiS3MuZS9XLDUzLjMhRWRoPSUwMjAsOEMkODJYQy8nKGtgVHUmNyt1NlZiJFVaLyVxJUAqaFYqLTZwRl9abTg2QEwxa0oxXSlWKlhbJyNxaXFvLWAybmVmYUAtKEJLOSpJcyxNUE4vaWtXKXNxUzVLJSpYb0ZBL0hZKk9eM3EvSGxTTzRDUHFXN05AW29uTCdUK2AxYVxCYE5mLTNNTU1PJkZKMCE7T0ZXSjAiPlVqSidAVF5qWSFpSSpyTFpXTk5lL1QjZkVoS1UkaEMsT2hiW0hcT3JtYGs4c1hOVS8zLk1oXyczcVB0TzJYdSJFUl5yRDlDc0FJIVorKUZuR1Bxa2xyRUFcQWEuMD8/MzRbc21KZlheVVBhdVpEVzZdK2Bgb0NZOD9QcW45KDRZSzliW09EJVBbLVhKQG9mNWVHcjppUl1sPkdxayY/KUNjbm9jdEZtbyNHZ1JVSS87cy9VZltkS1k7N0Uva1lYLmlmYGRZXHFvOSg2QjZAJDlHPmpZRnNjIy1KKz9dOkgyOERLPEhyVGdgYFs4QHRyPEUyUFJETmtjVUFKS3J0WiInPilPVUVHLl0/InAxTVByWWVRaXMuLkYzaiU9QlIlKUgpYVYia05WRSNEXSc1QGouRTpaSzwpVDc0cFY0VE9iUnRdUyVYTy1laSU2JEd0VDx0OCEtIUZkbF1VMFBzMz5gWGs2SnR1WC48J2hmJjZncydbOHBdV0E0QzdxR3EnSmlWSG5kK0dhb0RQMGFJU05CcWxOYFpWbz1pOEAkV19jQUE3NTRObVQ9M1g2Q2Q0RCExRF8kcyVJT0s7QFI2a2xJSyg+cypMSkIxL1AiSks4LipoNjdYJy0xMW5eckJHNVozQkRpXSRNRCciQT9fcjRMZlljJ2AhTU44I0xCcVM+YUMuRWQsXE8pPWhURkRqTjFgVnVSSzVmM0twOzEncnUtOytUPiFKVWNgXy5MckQwPDw8bVQnZDVUW0ZoQTlDciYwK00oUXMsYmM4TSwjXlxRUmAhYU8vOU5rKyMwbFVFanQjJTBBXS50O1dscTFHJztlPj8oTFVqLEo1KHU7RlRsIytgP2JMaitvTkdYOF9oS1UjRUREZzdmUUtvPDVBIT5xQ0I2RzwhOW03V0hYLHBXMUlnMnAiaDFWZmNrOU0iNSoySCVMUzpubG5VT2xlZmJkVFAvMmdkZ0s+TDA5V1xTbVwuVTsobEs7ZUNKI1ZHbWU7ckdSP2tRViJHI1w4bGQwXTpKUkI9QWRkISInbGwkJkVdNEFKXSteTzJMTSFnY1VAdFpSTU9ZbExvZ2lrVlNIYzJTVGxqdFRaSClSRz8jci9jQyl0L0ZtMSNqLy00R3BxYWQ+VTI6P2E5aTNSN1gqVWpLX0Fdb1E3Nz0lSVgnSWVYSmpnUDt1LyEoby4ycTRsNm9Na2MhV0wjdCIjY0dlUU5HVE9bLTlqLl1iOWByJ0NzKk5EOnReRypYdGdMT2gldEFSTS03I1lBNl9VLj1Mc0JCKDlwTmw/YzhRa05vPkI1OSpxSz88ZyNCPTE1RVY6SDZOQEMmM3ApS0JGVG85NzhsMlxAKDVhK01yKyJpWCMtcmFvSTZRMCNhV1UtUkdxbmFZXGQ9IWJLJGw+XSY9XSo6dTooRzVIQVNBKixkc1RsaSg/S0JCN1NQXjQpNCNTK0dyRXA+YmQmKCJ1cmBqNW1iVk1eYW9dXXRMI3NmQihQKTJaPD04SHFGXlpaZFw3KW9VPmArcm1UMTBwbUg4OSs5KyJlR2c9QU5mTCdrNFUjTy1QcFsrazdVV0x0bisxb2lhVk1rVFE7KFEqLmZuSUFmIjQ5R14yIUtoNjRjNDo2VUc5KipPUVI4PCoiPlFcPVZvR1IyVCpmdSYhPlA5VCE7KjQ0W1s+NVs8XEVYY1tXMC9dXENpcGQwbzJqXVw/NG1VIilMK0QkSi1vXHByXG9haFRYPWRJcU5XJUpDVmpONTp0QEFTXFhcWzs3VT1PO0tEJywvbVJmJj1YcUxIPGNcKGFfVz1wRkImLUU8OCYjdGg3SENAO2NeQTBuWzFyPm0vTDI/MzZxV15vXSV1YSdDZGMoZickOHBTKzVeXl91azQiR2lAJyRRTVVxb1dSLmtObjVVdS9lbUtobzBeVj1bbjFTTmJcPzpHVSdvJmssS2Q0LG1CRTdoITdKOj8pMENJOz5CK0xVPVNpdT8/Y2RbWGA8Rkhja28lTyFEKnFLPHEmLG0/TUYzTW9DRyw6STRARTdfPFVhRWxgW2tbO1s7cUZHKE44YWthV05vNGlhOTIuQm8sTzdOVWYvQCljRjlBSTMibzxGJ3RLXnRTITVjU0VeVkE2JjVJZ3NgbE91WztVa2ROLm89PlNsRjgtQCdKUVVVWDgzPTMqS1cvUGxBSDMwOURMOFBORjR1N1hNS0lgMyJcXmdmOm1ISE8qNi0kLUxyTktaO0AiRkRWXHVkLVoxJj9aIk9kLjRdJ2ctTkQiQFpGW2hNZExPaks7Ii9lZjUmVylGJmp1OGwrPk1bSUpMaVc5RyxXSkA1XG5mMC5OPCM5STohKDxJO25GKyFtP0hDZChlPEBgQj1fb2NsaFxWLGRiUWByMjstRmowcF9POEA8OVdHKlN0Tm83O1NjSmJBLGY1OmxhKkk+WkVfdS9RdClQPFNWT2BqWydrND4/dDMsZ3VmSk1rMXQyZFxwUTonb1VrNW0icE4/ITw0bXFtOUVObGRWbUFQZDUzXUZFYzJtYUdrPmdlSy07QkFPOz9vOTRnb2VgQmRKZlw3NmZsZmQjJGhXLlFVL2M+Jj5uJjckLkNBZ2RVXkpBcl9QbVloUUdSTStSNFFzbEU2PEs8b3A1aVlpVmhkUEswRzM7UUk7WmkoOF5uJ0xBTS5AJDA9dTQ1Vk1hXkpMcUQtUiZdQyxqXlxuTGJTQUlkNkJbQmc7Om5wYnBBO1o5OyVySForRV02WEhiaTkpZGY/Zyw0PFRhUUE7Z0NDVFwxQFRLWGN1Y2wzUWNLZkBlJ1xSVGYqUkkyTV5YRC9ZSXJqIT9DIiZpMSo8RVw2XixUck9jQWtaJyU5aWkpaFZWbnRAYSRyXG9qX2hZZk9oTnQvcFBUVUtQX0NVLmFtOWdWMDhea1ttNjJBdDczNFY3YXJPSTRuMjAzQV9oJGExZE1bY2BUcDhMYmIoYDklMEFxWlNWYWlEO2w9VTw2J1ZLN1RDbzNKJjtnIz4nIjlrOWotdCwmbyUhcGFLIjNccXA4TlBqc1k+Kl8rO15zOT8sRHVcZmtnRGROLyRGK3NrSz9TPihnNm4yN1QvYW5FUV5JQ25QM1paOi5cZEdZKShtMW9hZCdFKjRZJm5nN1JvSyVcclE4XD1kKDdkKFEmWz82Vi1aXWU4TklVRj0kJ10kRTBcSFBZY0gwcGFccTFTKGw3UmhKWyhPcUolNCI0S2JkPEpQXjltU1hjUDNHZCFRO2opTlRCWTErLTBHaVBmXktMYlRSN0lbO2MpS2JcaUNpNEVwXEohSUZZOWdaRFs6UkdcMm4pRD5iKlZJPmQlUmA9SFpcKUhUSGFAPEdiSyxZYnMqOElFXlskIitmZ2VDby1jQV1vaV1DUyhgaTNcNVpVXz0pdThkNU81TlZtLC1sJVIzNm11LS1TP2ZlTD4hdDs2RVkwOF0pJVIoNWZpPGohOCIrNV1wSmdXYzZsYD1XWSNSTyEnZy5TblhgX2tjRHAxX01eKF00Rz1kTiptYkJqSWw3LmNyNmlOSlxPJi8iMTY7MDtlVzw2WWtHXG1kMldLQCZYdC0+V2kkLC83bWc6VyZzLE9MTjpscCxKLzBUb0hIbSRyUVNXN1hZIlBmJmlOZ3EhX3BtdDNMX3EwOEclYjwrVGZTTmw9XE1pViZNRnJhZGpWLVZAYGBtTCwrSlJOOj9vUVZjcnNTVV5iTzwvbEwrNUUnbHI/J1JcQEpnazxTR2M9Z3FyKkZxdDNDI15ETiRGcUIjcTE0Lmx+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDAyMjkgMDAwMDAgbiAKMDAwMDAwMDM0MSAwMDAwMCBuIAowMDAwMDAwNDI0IDAwMDAwIG4gCjAwMDAwMDA2MjkgMDAwMDAgbiAKMDAwMDAwMDc0NCAwMDAwMCBuIAowMDAwMDAwOTQ5IDAwMDAwIG4gCjAwMDAwMDEwMTggMDAwMDAgbiAKMDAwMDAwMTI5OCAwMDAwMCBuIAowMDAwMDAxMzY0IDAwMDAwIG4gCjAwMDAwMDUzOTcgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8ZmMyOTYwZjNkYTM3NThhYzhmNjgxNDAyYmI1OTUxNGQ+PGZjMjk2MGYzZGEzNzU4YWM4ZjY4MTQwMmJiNTk1MTRkPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKMTAwNzQKJSVFT0YK" download="Yogesh_Mahindrakar_Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+          Download Resume
+        </a>
+        <a class="btn btn-ghost" href="mailto:yogeshmahindrakar24@gmail.com">Email me &rarr;</a>
+        <a class="btn btn-ghost" href="tel:+919702961792">Call +91 97029 61792</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/yogesh_m26/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yogesh Mahindrakar. Everything above is accurate to the best of my knowledge.</p>
     </div>
   </div>
-</section>
-
-<hr class="full-divider">
-
-<!-- ── CONTACT ── -->
-<section id="contact">
-  <div class="section-label reveal">Contact</div>
-  <h2 class="reveal">Get in Touch</h2>
-  <p class="section-intro reveal">Open to new QA opportunities. Reach out via any of the channels below.</p>
-  <div class="contact-grid">
-    <a class="contact-card reveal" href="mailto:yogeshmahindrakar24@gmail.com"><div class="contact-icon">✉️</div><div class="contact-label">Email</div><div class="contact-val">yogeshmahindrakar24@gmail.com</div></a>
-    <a class="contact-card reveal" href="tel:+919702961792"><div class="contact-icon">📞</div><div class="contact-label">Phone</div><div class="contact-val">+91 9702961792</div></a>
-    <a class="contact-card reveal" href="https://www.linkedin.com/in/yogesh-mahindrakar-190a88173/" target="_blank"><div class="contact-icon">💼</div><div class="contact-label">LinkedIn</div><div class="contact-val">yogesh-mahindrakar-190a88173</div></a>
-    <a class="contact-card reveal" href="https://yogeshmahindrakar24-design.github.io/yogeshmahindrakar.github.io/" target="_blank"><div class="contact-icon">🌐</div><div class="contact-label">Portfolio</div><div class="contact-val">yogeshmahindrakar24-design.github.io</div></a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Yogesh Mahindrakar · Manual QA Tester · Mumbai, Maharashtra</p>
-  <p style="margin-top:6px;font-size:12px">All information provided is true and accurate to the best of my knowledge.</p>
 </footer>
 
-<!-- Scroll to top button -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
 <script>
-// Nav scroll shadow
-const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
-});
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Hamburger menu
-const ham = document.getElementById('hamburger');
-const mob = document.getElementById('mobileMenu');
-ham.addEventListener('click', () => {
-  ham.classList.toggle('open');
-  mob.classList.toggle('open');
-});
-document.querySelectorAll('.mob-link').forEach(link => {
-  link.addEventListener('click', () => {
-    ham.classList.remove('open');
-    mob.classList.remove('open');
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  function setTheme(mode){
+    if(mode === 'dark'){ root.setAttribute('data-theme', 'dark'); }
+    else { root.removeAttribute('data-theme'); }
+    themeToggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+  }
+  setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  themeToggle.addEventListener('click', function(){
+    setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
-});
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mainNav.classList.remove('open'); });
+  });
+
+  var navLinks = Array.prototype.slice.call(mainNav.querySelectorAll('a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  var sectionObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var link = navLinks[sections.indexOf(entry.target)];
+      if(!link) return;
+      if(entry.isIntersecting) navLinks.forEach(function(l){ l.classList.remove('active'); }), link.classList.add('active');
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(function(s){ sectionObserver.observe(s); });
+
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el, i){
+    el.style.transitionDelay = reduceMotion ? '0ms' : (Math.min(i % 6, 5) * 60) + 'ms';
+    revealObserver.observe(el);
+  });
+
+  var countObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      countObserver.unobserve(el);
+      if(reduceMotion){ el.textContent = target; return; }
+      var start = null, duration = 900;
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.round(progress * target);
+        if(progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stat-count').forEach(function(el){ countObserver.observe(el); });
+
+  var termBody = document.getElementById('terminalBody');
+  var lines = [
+    { text: '$ whoami', cls: 'term-prompt' },
+    { text: 'yogesh-mahindrakar - manual qa tester', cls: '' },
+    { text: '', cls: '' },
+    { text: '$ ./run-test-suite.sh --candidate', cls: 'term-prompt' },
+    { text: '[PASS] requirement_review.spec', cls: 'term-pass' },
+    { text: '[PASS] functional_testing.spec', cls: 'term-pass' },
+    { text: '[PASS] regression_testing.spec', cls: 'term-pass' },
+    { text: '[PASS] cross_platform.spec  (web, android, ios)', cls: 'term-pass' },
+    { text: '[PASS] defect_lifecycle.spec  (jira)', cls: 'term-pass' },
+    { text: '', cls: '' },
+    { text: '$ status', cls: 'term-prompt' }
+  ];
+  var finalText = '5 passed, 0 failed. Ready for production.';
+
+  function runBoot(){
+    var delay = reduceMotion ? 0 : 220;
+    lines.forEach(function(line, i){
+      var div = document.createElement('div');
+      div.className = 'term-line' + (line.cls ? ' ' + line.cls : '');
+      div.textContent = line.text || '\u00A0';
+      termBody.appendChild(div);
+      setTimeout(function(){ div.classList.add('shown'); }, reduceMotion ? 0 : i * delay);
+    });
+    var afterLines = reduceMotion ? 0 : lines.length * delay + 200;
+    setTimeout(function(){
+      var finalDiv = document.createElement('div');
+      finalDiv.className = 'term-line term-final shown';
+      termBody.appendChild(finalDiv);
+      if(reduceMotion){
+        finalDiv.textContent = finalText;
+        return;
+      }
+      var i = 0;
+      var typer = setInterval(function(){
+        finalDiv.textContent = finalText.slice(0, i);
+        i++;
+        if(i > finalText.length){
+          clearInterval(typer);
+          var cursor = document.createElement('span');
+          cursor.className = 'term-cursor';
+          finalDiv.appendChild(cursor);
+        }
+      }, 28);
+    }, afterLines);
+  }
+
+  var termObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        runBoot();
+        termObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  termObserver.observe(document.querySelector('.terminal'));
+})();
 </script>
 </body>
 </html>
